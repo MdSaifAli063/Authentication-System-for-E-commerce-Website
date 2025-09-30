@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3210;
 const HOST = process.env.HOST || "127.0.0.1";
 const MONGO_URI =
   process.env.MONGO_URI ||
-  "mongodb+srv://Mdsaifali:Saif6343@saif1.n5mqz1l.mongodb.net/user-auth-demo?retryWrites=true&w=majority";
+  "";
 const SESSION_SECRET = process.env.SESSION_SECRET || "dev-secret-change-me";
 
 // View engine: all EJS templates live in project-root/public
