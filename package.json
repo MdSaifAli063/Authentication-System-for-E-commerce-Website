@@ -4,7 +4,8 @@
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-session": "^1.18.2",
-    "mongoose": "^8.16.4"
+    "mongoose": "^8.16.4",
+    "nodemailer": "^7.0.6"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

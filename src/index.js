@@ -3,6 +3,7 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
 const session = require("express-session");
+const nodemailer = require("nodemailer");
 const { User, mongoose } = require("./config");
 
 const app = express();
@@ -14,6 +15,76 @@ const MONGO_URI =
   process.env.MONGO_URI ||
   "";
 const SESSION_SECRET = process.env.SESSION_SECRET || "dev-secret-change-me";
+
+// SMTP config (set these in your environment for real email delivery)
+const SMTP_HOST = process.env.SMTP_HOST || "";
+const SMTP_PORT = parseInt(process.env.SMTP_PORT || "587", 10);
+const SMTP_USER = process.env.SMTP_USER || "";
+const SMTP_PASS = process.env.SMTP_PASS || "";
+const SMTP_FROM = process.env.SMTP_FROM || process.env.SMTP_USER || "no-reply@example.com";
+
+/**
+ * Nodemailer transporter:
+ * - Uses SMTP if credentials are present
+ * - Falls back to JSON transport (prints emails to console) during development if not configured
+ */
+let mailerTransport;
+if (SMTP_HOST && SMTP_USER && SMTP_PASS) {
+  mailerTransport = nodemailer.createTransport({
+    host: SMTP_HOST,
+    port: SMTP_PORT,
+    secure: SMTP_PORT === 465,
+    auth: { user: SMTP_USER, pass: SMTP_PASS },
+  });
+  // Optional: verify connection on startup
+  mailerTransport.verify().then(
+    () => console.log("SMTP: transporter verified"),
+    (err) => console.warn("SMTP: verification failed:", err.message)
+  );
+} else {
+  console.warn("SMTP not fully configured; using JSON transport (emails will be logged, not sent).");
+  mailerTransport = nodemailer.createTransport({ jsonTransport: true });
+}
+
+/**
+ * Helper: send password reset email
+ */
+async function sendPasswordResetEmail({ to, name, link, ip }) {
+  const safeName = name || "there";
+  const subject = "Reset your password";
+  const text =
+    `Hello ${safeName},\n\n` +
+    `We received a request to reset your password. Click the link below to set a new password:\n\n` +
+    `${link}\n\n` +
+    `This link will expire in 1 hour. If you didn't request this, you can ignore this email.\n\n` +
+    `Request IP: ${ip || "unknown"}\n` +
+    `Thanks,\nSupport Team`;
+  const html =
+    `<div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0f172a;line-height:1.6">` +
+    `<h2 style="margin:0 0 12px">Reset your password</h2>` +
+    `<p>Hello ${safeName},</p>` +
+    `<p>We received a request to reset your password. Click the button below to set a new password.</p>` +
+    `<p style="margin:20px 0"><a href="${link}" style="display:inline-block;background:#111827;color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px">Reset password</a></p>` +
+    `<p>Or copy and paste this link into your browser:<br><a href="${link}">${link}</a></p>` +
+    `<p style="color:#475569;font-size:14px">This link will expire in 1 hour. If you didn't request this, you can ignore this email.</p>` +
+    `<hr style="border:0;border-top:1px solid #e5e7eb;margin:16px 0" />` +
+    `<p style="color:#64748b;font-size:12px">Request IP: ${ip || "unknown"}</p>` +
+    `</div>`;
+
+  const info = await mailerTransport.sendMail({
+    from: SMTP_FROM,
+    to,
+    subject,
+    text,
+    html,
+  });
+
+  if (info.messageId) {
+    console.log("Password reset email queued, messageId:", info.messageId);
+  } else {
+    console.log("Password reset email sent:", info);
+  }
+}
 
 // View engine: all EJS templates live in project-root/public
 app.set("view engine", "ejs");
@@ -338,7 +409,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// Forgot password (routes can stay even if hidden in UI)
+// Forgot password: now sends an SMTP email with the reset link
 app.get("/forgot-password", (_req, res) => {
   res.render("forgot-password", {
     success: null,
@@ -353,8 +424,10 @@ app.post("/forgot-password", async (req, res) => {
     const email = normalizeEmail(req.body.email);
     const genericMsg = "If that email exists, we've sent a reset link.";
 
+    // Lookup user silently
     const user = await User.findOne({ email });
     if (!user) {
+      // Do not reveal whether user exists
       return res.render("forgot-password", {
         success: genericMsg,
         errors: [],
@@ -363,13 +436,28 @@ app.post("/forgot-password", async (req, res) => {
       });
     }
 
+    // Create token (1 hour)
     const token = crypto.randomBytes(32).toString("hex");
     user.resetPasswordToken = token;
     user.resetPasswordExpires = new Date(Date.now() + 1000 * 60 * 60);
     await user.save();
 
-    const link = `${req.protocol}://${req.get("host")}/reset-password/${token}`;
-    console.log("Password reset link:", link);
+    // Absolute link
+    const baseUrl = `${req.protocol}://${req.get("host")}`;
+    const link = `${baseUrl}/reset-password/${token}`;
+
+    // Send email (await)
+    try {
+      await sendPasswordResetEmail({
+        to: email,
+        name: user.name,
+        link,
+        ip: req.ip,
+      });
+    } catch (mailErr) {
+      console.error("Failed to send reset email:", mailErr);
+      // Keep response generic to avoid account enumeration
+    }
 
     return res.render("forgot-password", {
       success: genericMsg,
