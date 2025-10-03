@@ -11,6 +11,18 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 
 ---
 
+## 🌐 Live Demo  
+
+🔗 **URL**: [Authentication System Demo](https://your-demo-link.com)  
+
+---
+
+## 📸 **Preview:**  
+
+![Auth System Preview](https://via.placeholder.com/1000x500.png?text=Authentication+System+Preview)  
+
+---
+
 ## ✨ Features
 
 - 👤 Signup with validation (username, email, password, terms)
