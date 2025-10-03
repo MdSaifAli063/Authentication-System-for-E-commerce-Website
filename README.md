@@ -6,10 +6,15 @@
 Production-ready Node.js + Express authentication flow for an e‑commerce site. It uses EJS templates, sessions, and MongoDB (via Mongoose) with login, signup, logout, forgot password, and reset password flows.
 
  Express view engine: EJS
+ 
  Views directory: public (no separate views folder)
+ 
  Sessions: express-session
+ 
  Database: MongoDB (User model provided from src/config.js)
+ 
  Passwords: bcrypt
+ 
  Reset password: token + expiry saved on the user document
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)  
