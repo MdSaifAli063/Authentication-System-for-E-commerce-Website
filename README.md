@@ -29,7 +29,7 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 ![image](https://github.com/MdSaifAli063/Authentication-System-for-E-commerce-Website/blob/a80ad82a1a518558c2440f313baa9d127a77a418/Screenshot%202025-10-03%20094125.png)
 ![image](https://github.com/MdSaifAli063/Authentication-System-for-E-commerce-Website/blob/7c73c944dcffbdd503a8d1980149b10e68a736d3/Screenshot%202025-10-03%20094238.png)
 ![image](https://github.com/MdSaifAli063/Authentication-System-for-E-commerce-Website/blob/556fc8878f62e662a9312b393eeb800e01dc0664/Screenshot%202025-10-03%20094457.png)
-![image]()
+![image](https://github.com/MdSaifAli063/Authentication-System-for-E-commerce-Website/blob/138a9dcbce35229bb47f4c3c0f7e1f89837214ca/Screenshot%202025-10-03%20094606.png)
 ![image]()
 
 ---
