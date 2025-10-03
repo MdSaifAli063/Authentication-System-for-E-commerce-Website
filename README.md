@@ -13,15 +13,10 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 [![crypto](https://img.shields.io/badge/crypto-native-orange?style=for-the-badge)](https://nodejs.org/api/crypto.html)  
 
  Express view engine: EJS
- 
  Views directory: public (no separate views folder)
- 
  Sessions: express-session
- 
  Database: MongoDB (User model provided from src/config.js)
- 
  Passwords: bcrypt
- 
  Reset password: token + expiry saved on the user document
 
 
