@@ -7,7 +7,8 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)  
 [![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)  
-[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)  
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/) 
+[![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white)](https://mongoosejs.com/) 
 [![EJS](https://img.shields.io/badge/EJS-FFD700?style=for-the-badge&logo=ejs&logoColor=black)](https://ejs.co/)  
 [![bcrypt](https://img.shields.io/badge/bcrypt-003366?style=for-the-badge)](https://www.npmjs.com/package/bcrypt)  
 [![crypto](https://img.shields.io/badge/crypto-native-orange?style=for-the-badge)](https://nodejs.org/api/crypto.html)  
