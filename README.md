@@ -12,11 +12,11 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 [![bcrypt](https://img.shields.io/badge/bcrypt-003366?style=for-the-badge)](https://www.npmjs.com/package/bcrypt)  
 [![crypto](https://img.shields.io/badge/crypto-native-orange?style=for-the-badge)](https://nodejs.org/api/crypto.html)  
 
- Express view engine: EJS
- Views directory: public (no separate views folder)
- Sessions: express-session
- Database: MongoDB (User model provided from src/config.js)
- Passwords: bcrypt
+ Express view engine: EJS <br>
+ Views directory: public (no separate views folder) <br>
+ Sessions: express-session <br>
+ Database: MongoDB (User model provided from src/config.js) <br>
+ Passwords: bcrypt <br>
  Reset password: token + expiry saved on the user document
 
 
