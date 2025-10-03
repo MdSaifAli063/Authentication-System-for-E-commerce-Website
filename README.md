@@ -147,11 +147,13 @@ Ensure forms use correct names:
 - password for the password input
 
 Example (login.ejs form):
+```bash
 - <form action="/login" method="post" novalidate>
 -   <input type="email" name="email" required />
 -   <input type="password" name="password" required minlength="8" />
 -   <button type="submit">Log in</button>
 - </form>
+```
 
 Note: A body normalizer is included so common variants like Email, username, user, pass, pwd also map correctly to email/password.
 
