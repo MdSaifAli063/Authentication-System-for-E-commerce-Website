@@ -1,6 +1,5 @@
 # 🔐🛒 Authentication System for E‑commerce Website
 
-
 <div align="center">
   
 Production-ready Node.js + Express authentication flow for an e‑commerce site. It uses EJS templates, sessions, and MongoDB (via Mongoose) with login, signup, logout, forgot password, and reset password flows.
