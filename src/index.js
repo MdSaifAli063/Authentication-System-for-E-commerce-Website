@@ -11,9 +11,7 @@ const app = express();
 // Config
 const PORT = process.env.PORT || 3210;
 const HOST = process.env.HOST || "127.0.0.1";
-const MONGO_URI =
-  process.env.MONGO_URI ||
-  "";
+const MONGO_URI = process.env.MONGO_URI || "";
 const SESSION_SECRET = process.env.SESSION_SECRET || "dev-secret-change-me";
 
 // SMTP config (set these in your environment for real email delivery)
@@ -21,7 +19,8 @@ const SMTP_HOST = process.env.SMTP_HOST || "";
 const SMTP_PORT = parseInt(process.env.SMTP_PORT || "587", 10);
 const SMTP_USER = process.env.SMTP_USER || "";
 const SMTP_PASS = process.env.SMTP_PASS || "";
-const SMTP_FROM = process.env.SMTP_FROM || process.env.SMTP_USER || "no-reply@example.com";
+const SMTP_FROM =
+  process.env.SMTP_FROM || process.env.SMTP_USER || "no-reply@example.com";
 
 /**
  * Nodemailer transporter:
@@ -39,10 +38,12 @@ if (SMTP_HOST && SMTP_USER && SMTP_PASS) {
   // Optional: verify connection on startup
   mailerTransport.verify().then(
     () => console.log("SMTP: transporter verified"),
-    (err) => console.warn("SMTP: verification failed:", err.message)
+    (err) => console.warn("SMTP: verification failed:", err.message),
   );
 } else {
-  console.warn("SMTP not fully configured; using JSON transport (emails will be logged, not sent).");
+  console.warn(
+    "SMTP not fully configured; using JSON transport (emails will be logged, not sent).",
+  );
   mailerTransport = nodemailer.createTransport({ jsonTransport: true });
 }
 
@@ -106,7 +107,7 @@ app.use(
       sameSite: "lax",
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     },
-  })
+  }),
 );
 
 // Expose user to all templates
@@ -124,7 +125,11 @@ app.use((req, _res, next) => {
 // Diagnostics
 app.get("/health", (_req, res) => res.json({ ok: true }));
 app.get("/whoami", (req, res) =>
-  res.json({ hostHeader: req.headers.host, url: req.originalUrl, nodePid: process.pid })
+  res.json({
+    hostHeader: req.headers.host,
+    url: req.originalUrl,
+    nodePid: process.pid,
+  }),
 );
 app.get("/session", (req, res) => {
   res.json({ user: req.session.user || null, sessionID: req.sessionID });
@@ -160,7 +165,9 @@ app.use((req, res, next) => {
 
 // Helpers
 function normalizeEmail(email) {
-  return String(email || "").trim().toLowerCase();
+  return String(email || "")
+    .trim()
+    .toLowerCase();
 }
 function sanitizeUsername(name) {
   return String(name || "").trim();
@@ -246,7 +253,12 @@ app.get("/login", redirectIfAuth, (req, res) => {
 });
 
 app.get("/signup", redirectIfAuth, (_req, res) => {
-  res.render("signup", { success: null, errors: [], fieldErrors: {}, formData: {} });
+  res.render("signup", {
+    success: null,
+    errors: [],
+    fieldErrors: {},
+    formData: {},
+  });
 });
 
 // Signup
@@ -302,7 +314,7 @@ app.post("/signup", async (req, res) => {
     });
 
     return res.redirect(
-      "/login?m=" + encodeURIComponent("Signup successful! Please log in.")
+      "/login?m=" + encodeURIComponent("Signup successful! Please log in."),
     );
   } catch (err) {
     console.error("Signup error:", err);
@@ -335,40 +347,34 @@ app.post("/login", async (req, res) => {
     });
 
     if (errors.length) {
-      return res
-        .status(400)
-        .render("login", {
-          success: null,
-          errors,
-          fieldErrors,
-          formData: { email: rawEmail },
-        });
+      return res.status(400).render("login", {
+        success: null,
+        errors,
+        fieldErrors,
+        formData: { email: rawEmail },
+      });
     }
 
     const user = await User.findOne({ email: mail });
     if (!user) {
       const msg = "Email not found.";
-      return res
-        .status(404)
-        .render("login", {
-          success: null,
-          errors: [msg],
-          fieldErrors: { email: msg },
-          formData: { email: rawEmail },
-        });
+      return res.status(404).render("login", {
+        success: null,
+        errors: [msg],
+        fieldErrors: { email: msg },
+        formData: { email: rawEmail },
+      });
     }
 
     const ok = await bcrypt.compare(rawPassword, user.password);
     if (!ok) {
       const msg = "Incorrect password.";
-      return res
-        .status(401)
-        .render("login", {
-          success: null,
-          errors: [msg],
-          fieldErrors: { password: msg },
-          formData: { email: rawEmail },
-        });
+      return res.status(401).render("login", {
+        success: null,
+        errors: [msg],
+        fieldErrors: { password: msg },
+        formData: { email: rawEmail },
+      });
     }
 
     // Success: regenerate session, set user and redirect to home
@@ -382,7 +388,11 @@ app.post("/login", async (req, res) => {
           formData: { email: rawEmail },
         });
       }
-      req.session.user = { id: user._id.toString(), name: user.name, email: user.email };
+      req.session.user = {
+        id: user._id.toString(),
+        name: user.name,
+        email: user.email,
+      };
       req.session.save((saveErr) => {
         if (saveErr) {
           console.error("Session save failed:", saveErr);
@@ -546,7 +556,8 @@ app.post("/reset-password/:token", async (req, res) => {
     await user.save();
 
     return res.redirect(
-      "/login?m=" + encodeURIComponent("Password has been reset. Please log in.")
+      "/login?m=" +
+        encodeURIComponent("Password has been reset. Please log in."),
     );
   } catch (err) {
     console.error("Reset password error:", err);
@@ -577,7 +588,9 @@ app.use((req, res) => res.status(404).send("Not Found"));
 // Start: listen first, then connect DB (so UI still works if DB is down)
 function startServer() {
   app.listen(PORT, HOST, () => {
-    console.log(`Server running at http://${HOST}:${PORT}/ (pid ${process.pid})`);
+    console.log(
+      `Server running at http://${HOST}:${PORT}/ (pid ${process.pid})`,
+    );
     console.log(`Views directory:`, app.get("views"));
   });
 
@@ -585,7 +598,7 @@ function startServer() {
     .connect(MONGO_URI)
     .then(() => console.log("Database Connected Successfully"))
     .catch((err) =>
-      console.error("Database connection failed (app still running):", err)
+      console.error("Database connection failed (app still running):", err),
     );
 }
 
