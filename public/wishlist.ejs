@@ -1037,13 +1037,13 @@
             document
                 .querySelector('.header-actions button[title="Cart"]')
                 ?.addEventListener("click", () => {
-                    alert("Cart is currently empty.");
+                    location.href = '/cart';
                 });
 
             document
                 .querySelector('.header-actions button[title="Wishlist"]')
                 ?.addEventListener("click", () => {
-                    alert("Wishlist is currently empty.");
+                    location.href = '/wishlist';
                 });
 
             // Account dropdown (Log in / Sign up / Profile / Orders / Logout)
@@ -1122,7 +1122,7 @@
                     }
 
                     // If focus is not inside menu yet, start at first/last based on tab direction
-                    if currentIndex === -1) {
+                    if (currentIndex === -1) {
                         nextIndex = e.shiftKey ? focusables.length - 1 : 0;
                     }
 
