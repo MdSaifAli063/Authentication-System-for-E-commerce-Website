@@ -1035,13 +1035,13 @@
             document
                 .querySelector('.header-actions button[title="Cart"]')
                 ?.addEventListener("click", () => {
-                    alert("Cart is currently empty.");
+                    location.href = '/cart';
                 });
 
             document
                 .querySelector('.header-actions button[title="Wishlist"]')
                 ?.addEventListener("click", () => {
-                    alert("Wishlist is currently empty.");
+                    location.href = '/wishlist';
                 });
 
             // Account dropdown (Log in / Sign up / Profile / Orders / Logout)
