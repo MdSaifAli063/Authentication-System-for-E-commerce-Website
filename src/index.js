@@ -583,6 +583,23 @@ app.get("/logout", (req, res) => {
   });
 });
 
+// Add routes for new pages
+app.get("/products", (_req, res) => {
+  res.render("products");
+});
+
+app.get("/services", (_req, res) => {
+  res.render("services");
+});
+
+app.get("/about", (_req, res) => {
+  res.render("about");
+});
+
+app.get("/contact", (_req, res) => {
+  res.render("contact");
+});
+
 // 404
 app.use((req, res) => res.status(404).send("Not Found"));
 
