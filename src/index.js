@@ -583,21 +583,37 @@ app.get("/logout", (req, res) => {
   });
 });
 
-// Add routes for new pages
-app.get("/products", (_req, res) => {
+// Protected routes for all pages except home
+app.get("/products", requireAuth, (_req, res) => {
   res.render("products");
 });
 
-app.get("/services", (_req, res) => {
+app.get("/services", requireAuth, (_req, res) => {
   res.render("services");
 });
 
-app.get("/about", (_req, res) => {
+app.get("/about", requireAuth, (_req, res) => {
   res.render("about");
 });
 
-app.get("/contact", (_req, res) => {
+app.get("/contact", requireAuth, (_req, res) => {
   res.render("contact");
+});
+
+app.get("/profile", requireAuth, (req, res) => {
+  res.render("profile");
+});
+
+app.get("/orders", requireAuth, (req, res) => {
+  res.render("orders");
+});
+
+app.get("/cart", requireAuth, (req, res) => {
+  res.render("cart");
+});
+
+app.get("/wishlist", requireAuth, (req, res) => {
+  res.render("wishlist");
 });
 
 // 404
