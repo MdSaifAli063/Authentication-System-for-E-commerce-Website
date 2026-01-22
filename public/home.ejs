@@ -527,15 +527,17 @@
       }
 
       .grid.categories {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
-    @media (max-width: 899px) {
-      .grid.products {
+    @media (max-width: 899px) and (min-width: 600px) {
+      .grid.categories {
         grid-template-columns: repeat(2, 1fr);
       }
+    }
 
+    @media (max-width: 599px) {
       .grid.categories {
         grid-template-columns: 1fr;
       }
@@ -1089,9 +1091,17 @@
           <div class="card">
             <img class="card-img"
               src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Sharwani">
+              alt="Suits">
             <div class="card-body">
-              <div class="card-title">Sharwani</div>
+              <div class="card-title">Suits</div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Coats">
+            <div class="card-body">
+              <div class="card-title">Coats</div>
             </div>
           </div>
           <div class="card">
@@ -1105,9 +1115,33 @@
           <div class="card">
             <img class="card-img"
               src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Coats">
+              alt="Blazers">
             <div class="card-body">
-              <div class="card-title">Coats</div>
+              <div class="card-title">Blazers</div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Sharwani">
+            <div class="card-body">
+              <div class="card-title">Sharwani</div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Kurtas">
+            <div class="card-body">
+              <div class="card-title">Kurtas</div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Waistcoats">
+            <div class="card-body">
+              <div class="card-title">Waistcoats</div>
             </div>
           </div>
         </div>
@@ -1246,9 +1280,13 @@
         <div>
           <div class="footer-title">Categories</div>
           <ul class="footer-categories">
-            <li><a href="#">Sharwani</a></li>
-            <li><a href="#">Pants</a></li>
+            <li><a href="#">Suits</a></li>
             <li><a href="#">Coats</a></li>
+            <li><a href="#">Pants</a></li>
+            <li><a href="#">Blazers</a></li>
+            <li><a href="#">Sharwani</a></li>
+            <li><a href="#">Kurtas</a></li>
+            <li><a href="#">Waistcoats</a></li>
           </ul>
         </div>
         <div>
