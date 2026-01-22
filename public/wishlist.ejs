@@ -17,9 +17,9 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 32px;
         }
 
         header {
@@ -756,6 +756,12 @@
                 font-size: 54px;
             }
         }
+
+        @media (min-width: 1200px) {
+            .container {
+                padding: 0 48px;
+            }
+        }
     </style>
 </head>
 
@@ -905,28 +911,27 @@
                     <span>Wishlist</span>
                 </h1>
                 <p class="hero-desc">
-                    Saved items.
+                    Saved items for later.
                 </p>
+                <div class="hero-buttons">
+                    <button class="btn-gold">Browse Products</button>
+                    <button class="btn-secondary">Clear Wishlist</button>
+                </div>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
-                <div class="section-title">Saved Items</div>
-                <div class="section-desc">Your wishlist</div>
-                <div class="grid products">
-                    <div class="card" onclick="alert('Added to cart!')">
-                        <img class="card-img"
-                            src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
-                            alt="Royal Silk Sharwani">
+                <div class="section-title">Wishlist Items</div>
+                <div class="section-desc">Items you've saved</div>
+                <div style="max-width:800px; margin:0 auto;">
+                    <div class="card" style="margin-bottom:20px;" onclick="alert('Removed from wishlist!')">
                         <div class="card-body">
-                            <div class="card-label">Sale</div>
                             <div class="card-title">Royal Silk Sharwani</div>
-                            <div class="card-desc">Exquisite silk sharwani.</div>
+                            <div class="card-desc">Premium quality</div>
                             <div class="card-price">$499.99</div>
                         </div>
                     </div>
-                    <!-- Add more wishlist items as needed -->
                 </div>
             </div>
         </section>
