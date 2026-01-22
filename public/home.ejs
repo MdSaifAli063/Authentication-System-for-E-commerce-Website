@@ -756,6 +756,123 @@
         font-size: 54px;
       }
     }
+
+    /* New styles for added sections */
+    .new-arrivals .grid {
+      display: grid;
+      gap: 40px;
+    }
+
+    @media (min-width: 900px) {
+      .new-arrivals .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 899px) {
+      .new-arrivals .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .why-choose-us {
+      background: linear-gradient(135deg, #fff 80%, #f4e4a6 100%);
+      padding: 80px 0;
+      border-radius: 32px;
+      margin: 40px 0;
+      box-shadow: 0 4px 24px rgba(212, 175, 55, 0.08);
+    }
+
+    .why-choose-us .container {
+      text-align: center;
+    }
+
+    .features {
+      display: grid;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 900px) {
+      .features {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .feature {
+      background: #fff;
+      padding: 32px;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(212, 175, 55, 0.12);
+      transition: transform 0.2s;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-icon {
+      font-size: 48px;
+      color: #d4af37;
+      margin-bottom: 16px;
+    }
+
+    .feature-title {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #1a2332;
+      margin-bottom: 12px;
+    }
+
+    .feature-desc {
+      color: #4a5568;
+      font-size: 16px;
+    }
+
+    .testimonials {
+      background: linear-gradient(135deg, #1a2332 80%, #d4af37 100%);
+      color: #fff;
+      padding: 80px 0;
+      border-radius: 32px;
+      margin: 40px 0;
+      box-shadow: 0 4px 24px rgba(212, 175, 55, 0.08);
+    }
+
+    .testimonials .container {
+      text-align: center;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 900px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .testimonial {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 32px;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(212, 175, 55, 0.12);
+    }
+
+    .testimonial-quote {
+      font-style: italic;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      font-size: 16px;
+      color: #f4e4a6;
+    }
   </style>
 </head>
 
@@ -1006,6 +1123,100 @@
           <input type="email" placeholder="Your email address" required>
           <button type="submit">Subscribe</button>
         </form>
+      </div>
+    </section>
+
+    <!-- New section: New Arrivals -->
+    <section class="section new-arrivals">
+      <div class="container">
+        <div class="section-title">New Arrivals</div>
+        <div class="section-desc">Check out the latest suits and accessories added to our collection</div>
+        <div class="grid">
+          <div class="card">
+            <img class="card-img"
+              src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Modern Slim Fit Suit">
+            <div class="card-body">
+              <div class="card-label">New</div>
+              <div class="card-title">Modern Slim Fit Suit</div>
+              <div class="card-desc">Contemporary slim-fit suit perfect for business and events.</div>
+              <div class="card-price">$349.99</div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Classic Tuxedo">
+            <div class="card-body">
+              <div class="card-label">New</div>
+              <div class="card-title">Classic Tuxedo</div>
+              <div class="card-desc">Timeless tuxedo for formal occasions with premium tailoring.</div>
+              <div class="card-price">$499.99</div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Leather Belt">
+            <div class="card-body">
+              <div class="card-label">New</div>
+              <div class="card-title">Premium Leather Belt</div>
+              <div class="card-desc">High-quality leather belt to complement any suit.</div>
+              <div class="card-price">$79.99</div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:48px;">
+          <button class="btn-secondary">View All New Arrivals</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- New section: Why Choose Us -->
+    <section class="why-choose-us">
+      <div class="container">
+        <div class="section-title">Why Choose Us</div>
+        <div class="section-desc">Experience unparalleled quality and service in men's suits</div>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">👔</div>
+            <div class="feature-title">Premium Quality</div>
+            <div class="feature-desc">Handcrafted suits using the finest fabrics and expert tailoring.</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🚚</div>
+            <div class="feature-title">Fast Shipping</div>
+            <div class="feature-desc">Quick and reliable delivery to get you suited up in no time.</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-title">Easy Returns</div>
+            <div class="feature-desc">Hassle-free returns and exchanges for your peace of mind.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New section: Customer Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-title white">What Our Customers Say</div>
+        <div class="section-desc white">Hear from satisfied customers who trust us for their style needs</div>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <div class="testimonial-quote">"The suit fit perfectly and the quality is outstanding. Highly recommend!"
+            </div>
+            <div class="testimonial-author">- John D.</div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-quote">"Excellent customer service and fast delivery. My go-to for suits."</div>
+            <div class="testimonial-author">- Michael R.</div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-quote">"Timeless designs that make me look sharp every time."</div>
+            <div class="testimonial-author">- David L.</div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
