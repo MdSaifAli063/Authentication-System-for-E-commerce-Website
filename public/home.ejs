@@ -892,6 +892,100 @@
         margin: 60px 0;
       }
     }
+
+    /* Slider styles */
+    .slider-section {
+      padding: 80px 0;
+      background: #fff;
+      border-radius: 32px;
+      margin: 40px 0;
+      box-shadow: 0 4px 24px rgba(212, 175, 55, 0.08);
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(212, 175, 55, 0.12);
+    }
+
+    .slider {
+      display: flex;
+      width: 600%;
+      animation: slide 18s infinite;
+    }
+
+    .slide {
+      width: 16.666%;
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+
+      16.67% {
+        transform: translateX(0);
+      }
+
+      33.33% {
+        transform: translateX(-16.67%);
+      }
+
+      50% {
+        transform: translateX(-16.67%);
+      }
+
+      66.67% {
+        transform: translateX(-33.33%);
+      }
+
+      83.33% {
+        transform: translateX(-33.33%);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .slider-dots {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #d4af37;
+      margin: 0 5px;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .dot.active {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .slide img {
+        height: 250px;
+      }
+    }
   </style>
 </head>
 
@@ -1038,6 +1132,56 @@
         <div class="hero-buttons">
           <button class="btn-gold" onclick="location.href='/products'">Shop Collection</button>
           <button class="btn-secondary" onclick="location.href='/about'">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Image Slider Section -->
+    <section class="slider-section">
+      <div class="container">
+        <div class="section-title">Featured Styles</div>
+        <div class="section-desc">Explore our latest fashion highlights</div>
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slide">
+              <img
+                src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Style 1">
+            </div>
+            <div class="slide">
+              <img
+                src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Style 2">
+            </div>
+            <div class="slide">
+              <img
+                src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Style 3">
+            </div>
+            <div class="slide">
+              <img
+                src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Style 4">
+            </div>
+            <div class="slide">
+              <img
+                src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Style 5">
+            </div>
+            <div class="slide">
+              <img
+                src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Style 6">
+            </div>
+          </div>
+        </div>
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
       </div>
     </section>
@@ -1470,6 +1614,15 @@
           focusables[nextIndex].focus();
         }
       });
+
+      // Slider dots update
+      const dots = document.querySelectorAll('.dot');
+      let currentSlide = 0;
+      setInterval(() => {
+        dots.forEach(dot => dot.classList.remove('active'));
+        currentSlide = (currentSlide + 1) % 6;
+        dots[currentSlide].classList.add('active');
+      }, 3000); // Match animation timing
     });
   </script>
 </body>
