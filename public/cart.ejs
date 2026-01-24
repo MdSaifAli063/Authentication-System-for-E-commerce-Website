@@ -70,10 +70,24 @@
 
         nav button.active,
         nav button:hover {
-            color: #fff;
+            color: #d4af37;
+            background: none;
+            box-shadow: none;
+            position: relative;
+        }
+
+        nav button.active::after,
+        nav button:hover::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 16px;
+            right: 16px;
+            bottom: 4px;
+            height: 3px;
+            border-radius: 2px;
             background: linear-gradient(90deg, #d4af37 60%, #f4e4a6 100%);
-            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);
-            transform: translateX(-6px) scale(1.08);
+            transition: width 0.2s;
         }
 
         nav button:not(:first-child) {
