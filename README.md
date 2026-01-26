@@ -34,6 +34,7 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 
 ---
 
+
 ## ✨ Features
 
 - 👤 Signup with validation (username, email, password, terms)
