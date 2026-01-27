@@ -442,7 +442,7 @@
     }
 
     .hero-title {
-      font-size: 80px;
+      font-size: 48px;
       font-family: 'Poppins', Arial, sans-serif;
       font-weight: bold;
       color: #fff;
@@ -459,13 +459,13 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       color: transparent;
-      font-size: 90px;
+      font-size: 56px;
       font-weight: 900;
       letter-spacing: 4px;
     }
 
     .hero-desc {
-      font-size: 28px;
+      font-size: 18px;
       color: #fff;
       opacity: 0.95;
       margin-bottom: 48px;
@@ -505,7 +505,7 @@
     }
 
     .section-title {
-      font-size: 44px;
+      font-size: 32px;
       font-family: 'Poppins', Arial, sans-serif;
       font-weight: bold;
       color: #1a2332;
@@ -519,7 +519,7 @@
     }
 
     .section-desc {
-      font-size: 24px;
+      font-size: 16px;
       color: #4a5568;
       margin-bottom: 40px;
     }
@@ -606,7 +606,7 @@
     .card-title {
       font-family: 'Poppins', Arial, sans-serif;
       font-weight: 700;
-      font-size: 26px;
+      font-size: 18px;
       color: #1a2332;
       margin-bottom: 12px;
       letter-spacing: 1px;
@@ -614,15 +614,63 @@
 
     .card-desc {
       color: #4a5568;
-      font-size: 17px;
+      font-size: 14px;
       margin-bottom: 18px;
     }
 
     .card-price {
-      font-size: 20px;
+      font-size: 16px;
       color: #d4af37;
       text-decoration: line-through;
       font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .card-action-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border: 2px solid #d4af37;
+      background: #fff;
+      color: #1a2332;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+
+    .card-action-btn:hover {
+      background: linear-gradient(90deg, #d4af37 80%, #f4e4a6 100%);
+      color: #1a2332;
+      box-shadow: 0 2px 8px #d4af37;
+    }
+
+    .card-action-btn.add-to-cart {
+      background: linear-gradient(90deg, #d4af37 80%, #f4e4a6 100%);
+      color: #1a2332;
+      border-color: #d4af37;
+    }
+
+    .card-action-btn.add-to-cart:hover {
+      background: linear-gradient(90deg, #1a2332 80%, #d4af37 100%);
+      color: #fff;
+    }
+
+    .card-action-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
     }
 
     .newsletter-form {
@@ -685,7 +733,7 @@
     .footer-title {
       font-family: 'Poppins', Arial, sans-serif;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 18px;
       margin-bottom: 18px;
       letter-spacing: 1px;
       color: #f4e4a6;
@@ -1224,6 +1272,25 @@
               <div class="card-desc">Exquisite silk sharwani with intricate embroidery and traditional craftsmanship.
                 Perfect for weddings and special occasions.</div>
               <div class="card-price">$499.99</div>
+              <div class="card-actions">
+                <button class="card-action-btn add-to-cart" title="Add to Cart" onclick="alert('Added to cart!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <path d="M3 6h18"></path>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  Add to Cart
+                </button>
+                <button class="card-action-btn" title="Add to Wishlist" onclick="alert('Added to wishlist!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1236,6 +1303,25 @@
               <div class="card-desc">Perfectly tailored dress pants with premium fabric and impeccable fit. Essential
                 for professional wardrobe.</div>
               <div class="card-price">$119.99</div>
+              <div class="card-actions">
+                <button class="card-action-btn add-to-cart" title="Add to Cart" onclick="alert('Added to cart!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <path d="M3 6h18"></path>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  Add to Cart
+                </button>
+                <button class="card-action-btn" title="Add to Wishlist" onclick="alert('Added to wishlist!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1247,6 +1333,25 @@
               <div class="card-title">Premium Wool Overcoat</div>
               <div class="card-desc">Luxurious wool overcoat with elegance.</div>
               <div class="card-price">$299.99</div>
+              <div class="card-actions">
+                <button class="card-action-btn add-to-cart" title="Add to Cart" onclick="alert('Added to cart!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <path d="M3 6h18"></path>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  Add to Cart
+                </button>
+                <button class="card-action-btn" title="Add to Wishlist" onclick="alert('Added to wishlist!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1258,6 +1363,25 @@
               <div class="card-title">Classic Blazer</div>
               <div class="card-desc">Classic blazer for timeless style and sophistication.</div>
               <div class="card-price">$199.99</div>
+              <div class="card-actions">
+                <button class="card-action-btn add-to-cart" title="Add to Cart" onclick="alert('Added to cart!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <path d="M3 6h18"></path>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  Add to Cart
+                </button>
+                <button class="card-action-btn" title="Add to Wishlist" onclick="alert('Added to wishlist!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1347,6 +1471,25 @@
               <div class="card-title">Modern Slim Fit Suit</div>
               <div class="card-desc">Contemporary slim-fit suit perfect for business and events.</div>
               <div class="card-price">$349.99</div>
+              <div class="card-actions">
+                <button class="card-action-btn add-to-cart" title="Add to Cart" onclick="alert('Added to cart!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <path d="M3 6h18"></path>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  Add to Cart
+                </button>
+                <button class="card-action-btn" title="Add to Wishlist" onclick="alert('Added to wishlist!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1358,6 +1501,25 @@
               <div class="card-title">Classic Tuxedo</div>
               <div class="card-desc">Timeless tuxedo for formal occasions with premium tailoring.</div>
               <div class="card-price">$499.99</div>
+              <div class="card-actions">
+                <button class="card-action-btn add-to-cart" title="Add to Cart" onclick="alert('Added to cart!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <path d="M3 6h18"></path>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  Add to Cart
+                </button>
+                <button class="card-action-btn" title="Add to Wishlist" onclick="alert('Added to wishlist!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1369,6 +1531,25 @@
               <div class="card-title">Premium Leather Belt</div>
               <div class="card-desc">High-quality leather belt to complement any suit.</div>
               <div class="card-price">$79.99</div>
+              <div class="card-actions">
+                <button class="card-action-btn add-to-cart" title="Add to Cart" onclick="alert('Added to cart!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <path d="M3 6h18"></path>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  Add to Cart
+                </button>
+                <button class="card-action-btn" title="Add to Wishlist" onclick="alert('Added to wishlist!')">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
