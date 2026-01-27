@@ -117,6 +117,22 @@ app.use((req, res, next) => {
   next();
 });
 
+// Expose current page to all templates
+app.use((req, res, next) => {
+  const path = req.path;
+  let currentPage = "home"; // default
+  if (path === "/products") currentPage = "products";
+  else if (path === "/services") currentPage = "services";
+  else if (path === "/about") currentPage = "about";
+  else if (path === "/contact") currentPage = "contact";
+  else if (path === "/profile") currentPage = "profile";
+  else if (path === "/orders") currentPage = "orders";
+  else if (path === "/cart") currentPage = "cart";
+  else if (path === "/wishlist") currentPage = "wishlist";
+  res.locals.currentPage = currentPage;
+  next();
+});
+
 // Logs
 app.use((req, _res, next) => {
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
