@@ -781,11 +781,15 @@
 
             <!-- Navigation in center -->
             <nav>
-                <button onclick="location.href='/'">Home</button>
-                <button onclick="location.href='/products'">Products</button>
-                <button onclick="location.href='/services'">Services</button>
-                <button onclick="location.href='/about'">About</button>
-                <button onclick="location.href='/contact'">Contact</button>
+                <button class="<%= currentPage === 'home' ? 'active' : '' %>" onclick="location.href='/'">Home</button>
+                <button class="<%= currentPage === 'products' ? 'active' : '' %>"
+                    onclick="location.href='/products'">Products</button>
+                <button class="<%= currentPage === 'services' ? 'active' : '' %>"
+                    onclick="location.href='/services'">Services</button>
+                <button class="<%= currentPage === 'about' ? 'active' : '' %>"
+                    onclick="location.href='/about'">About</button>
+                <button class="<%= currentPage === 'contact' ? 'active' : '' %>"
+                    onclick="location.href='/contact'">Contact</button>
             </nav>
 
             <!-- Actions: Search, Wishlist, Cart, Account -->
