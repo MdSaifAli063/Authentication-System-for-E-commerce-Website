@@ -57,7 +57,6 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
   
 ---
 
-
 ## 📂 Project Structure
 
 Example layout:
