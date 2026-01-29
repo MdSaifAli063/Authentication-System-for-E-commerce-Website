@@ -23,11 +23,7 @@ const SMTP_PASS = process.env.SMTP_PASS || "";
 const SMTP_FROM =
   process.env.SMTP_FROM || process.env.SMTP_USER || "no-reply@example.com";
 
-/**
- * Nodemailer transporter:
- * - Uses SMTP if credentials are present
- * - Falls back to JSON transport (prints emails to console) during development if not configured
- */
+// Mailer transport
 let mailerTransport;
 if (SMTP_HOST && SMTP_USER && SMTP_PASS) {
   mailerTransport = nodemailer.createTransport({
