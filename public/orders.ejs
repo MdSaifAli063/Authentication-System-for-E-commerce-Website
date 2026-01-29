@@ -172,6 +172,7 @@
             align-items: center;
             gap: 8px;
             position: relative;
+            z-index: 100;
         }
 
         .search-form input {
@@ -181,8 +182,15 @@
             font-size: 14px;
             width: 200px;
             outline: none;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s, width 0.3s, padding 0.3s;
             background: rgba(255, 255, 255, 0.9);
+        }
+
+        .search-form input:focus {
+            width: 280px;
+            padding: 12px 16px;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+            border-color: #d4af37;
         }
 
         .search-form input:focus {
