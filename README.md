@@ -22,7 +22,6 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 
 ---
 
-
 ## 📸 **Preview:**  
 
 ![image](https://github.com/MdSaifAli063/Authentication-System-for-E-commerce-Website/blob/7c59f2312d346c70fc94a463a79def262b4a893f/Screenshot%202025-10-03%20094007.png)
@@ -33,7 +32,6 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 ![image](https://github.com/MdSaifAli063/Authentication-System-for-E-commerce-Website/blob/ab8c9eee3e31b34b6ae43b3a86912f06a18ae59d/Screenshot%202025-10-03%20094841.png)
 
 ---
-
 
 ## ✨ Features
 
@@ -48,7 +46,6 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 
 ---
 
-
 ## 🧱 Tech Stack
 
 - Node.js, Express
@@ -59,7 +56,6 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 - MongoDB + Mongoose (via src/config.js that exports { User, mongoose })
   
 ---
-
 
 ## 📂 Project Structure
 
@@ -82,7 +78,6 @@ Note:
 
 ---
 
-
 ## ✅ Prerequisites
 
 - Node.js 18+ (recommended)
@@ -90,7 +85,6 @@ Note:
 - npm
 
 ---
-
 
 ## ⚙️ Environment Variables
 
