@@ -126,18 +126,45 @@
       cursor: pointer;
       color: #1a2332;
       font-size: 18px;
-      transition: color 0.2s, transform 0.2s, background 0.2s;
+      transition: all 0.3s ease;
       border-radius: 50%;
-      padding: 6px;
+      padding: 8px;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 4px;
+      position: relative;
+      width: 40px;
+      height: 40px;
     }
 
     .header-actions button.icon:hover {
       color: #d4af37;
-      background: #f4e4a6;
-      transform: scale(1.08);
+      background: linear-gradient(135deg, #f4e4a6 0%, #d4af37 100%);
+      transform: scale(1.12);
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    }
+
+    .wishlist-btn:hover .heart-icon {
+      fill: #d4af37;
+      stroke: #d4af37;
+      animation: heartbeat 0.6s ease-in-out;
+    }
+
+    @keyframes heartbeat {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      25% {
+        transform: scale(1.3);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
     }
 
     .search-form {
@@ -1090,9 +1117,9 @@
         </form>
 
         <!-- Wishlist -->
-        <button class="icon" title="Wishlist" aria-label="Wishlist">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
+        <button class="icon wishlist-btn" title="Wishlist" aria-label="Wishlist">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="heart-icon">
             <path
               d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
             </path>
