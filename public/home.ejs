@@ -1102,10 +1102,44 @@
         height: 350px;
       }
     }
+
+    /* Top marquee banner */
+    .top-marquee {
+      background: #7a0000;
+      /* dark red */
+      color: #fff;
+      padding: 6px 0;
+      text-align: center;
+      overflow: hidden;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.6px;
+    }
+
+    .top-marquee .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: marquee 14s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
   </style>
 </head>
 
 <body>
+  <div class="top-marquee" role="region" aria-label="Site announcement">
+    <div class="marquee-content">Free delivery on orders over $50 — limited time offer!</div>
+  </div>
   <header>
     <div class="container header-content">
       <!-- Site Title on left -->
