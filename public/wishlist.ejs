@@ -811,10 +811,44 @@
                 padding: 0 48px;
             }
         }
+
+        /* Top marquee banner */
+        .top-marquee {
+            background: #7a0000;
+            /* dark red */
+            color: #fff;
+            padding: 6px 0;
+            text-align: center;
+            overflow: hidden;
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.6px;
+        }
+
+        .top-marquee .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: marquee 14s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="top-marquee" role="region" aria-label="Site announcement">
+        <div class="marquee-content">Free delivery on orders over $50 — limited time offer!</div>
+    </div>
     <header>
         <div class="container header-content">
             <!-- Site Title on left -->
@@ -848,14 +882,14 @@
                 </form>
 
                 <!-- Wishlist -->
-        <button class="icon wishlist-btn" title="Wishlist" aria-label="Wishlist">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="heart-icon">
-            <path
-              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-            </path>
-          </svg>
-        </button>
+                <button class="icon wishlist-btn" title="Wishlist" aria-label="Wishlist">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="heart-icon">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                </button>
 
                 <!-- Cart -->
                 <button class="icon" title="Cart" aria-label="Cart">
