@@ -836,6 +836,123 @@
                 transform: translateX(-100%);
             }
         }
+
+        /* Contact section styles */
+        .contact-wrap {
+            max-width: 1200px;
+            margin: 28px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: #fff;
+            padding: 24px;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(26, 35, 50, 0.06);
+        }
+
+        .contact-form .row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            border: 1px solid #ececec;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 14px;
+            background: #fff;
+            box-sizing: border-box;
+        }
+
+        .contact-form .form-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(26, 35, 50, 0.04);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: #f4f4f6;
+            color: #1a2332;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .map-embed {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .map-embed iframe {
+            width: 100%;
+            height: 260px;
+            border: 0;
+            display: block;
+        }
+
+        .contact-section .section-desc {
+            max-width: 900px;
+            margin-bottom: 18px;
+        }
+
+        .contact-form .note {
+            margin-top: 14px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        @media (max-width: 900px) {
+            .contact-wrap {
+                grid-template-columns: 1fr;
+                padding: 0 16px;
+            }
+
+            .contact-form {
+                padding: 18px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .map-embed iframe {
+                height: 320px;
+            }
+
+            .social-links a {
+                width: 44px;
+                height: 44px;
+            }
+        }
     </style>
 </head>
 
@@ -1008,34 +1125,30 @@
                 <div class="section-desc">We'd love to hear from you — questions, custom orders, or collaborations.
                 </div>
 
-                <div class="contact-wrap"
-                    style="max-width:1200px; margin:28px auto; display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start;">
+                <div class="contact-wrap">
                     <form class="contact-form"
-                        onsubmit="event.preventDefault(); alert('Thanks — we received your message.'); this.reset();"
-                        style="background:#fff; padding:24px; border-radius:14px; box-shadow:0 8px 30px rgba(26,35,50,0.06);">
-                        <div style="display:flex; gap:12px;">
-                            <input type="text" name="name" placeholder="Your Name" required
-                                style="flex:1; padding:12px; border:1px solid #ececec; border-radius:8px;">
-                            <input type="email" name="email" placeholder="Your Email" required
-                                style="flex:1; padding:12px; border:1px solid #ececec; border-radius:8px;">
+                        onsubmit="event.preventDefault(); alert('Thanks — we received your message.'); this.reset();">
+                        <div class="row">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
-                        <input type="text" name="subject" placeholder="Subject"
-                            style="width:100%; margin-top:12px; padding:12px; border:1px solid #ececec; border-radius:8px;">
+
+                        <input type="text" name="subject" placeholder="Subject" style="margin-top:12px;">
                         <textarea name="message" placeholder="Your Message" rows="6" required
-                            style="width:100%; margin-top:12px; padding:12px; border:1px solid #ececec; border-radius:8px;"></textarea>
-                        <div style="display:flex; gap:12px; margin-top:12px; align-items:center;">
+                            style="margin-top:12px;"></textarea>
+
+                        <div class="form-actions">
                             <button type="submit" class="btn-gold">Send Message</button>
                             <button type="button" class="btn-secondary"
                                 onclick="document.getElementById('contactMap').scrollIntoView({behavior:'smooth'})">View
                                 Map</button>
                         </div>
-                        <p style="margin-top:14px; color:#6b7280; font-size:13px;">We aim to respond within 1 business
-                            day.</p>
+
+                        <p class="note">We aim to respond within 1 business day.</p>
                     </form>
 
-                    <div class="contact-info" style="display:flex; flex-direction:column; gap:16px;">
-                        <div
-                            style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 20px rgba(26,35,50,0.04);">
+                    <div class="contact-info">
+                        <div class="contact-card contact-details">
                             <h3 style="margin:0 0 8px 0; font-size:18px;">Contact Details</h3>
                             <p style="margin:6px 0;"><strong>Address:</strong> 123 Fashion Ave, Cityville, Country</p>
                             <p style="margin:6px 0;"><strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567
@@ -1045,20 +1158,16 @@
                             <p style="margin:6px 0;"><strong>Hours:</strong> Mon–Sat 9:00am – 6:00pm</p>
                         </div>
 
-                        <div
-                            style="background:#fff; padding:18px; border-radius:12px; box-shadow:0 6px 20px rgba(26,35,50,0.04);">
+                        <div class="contact-card social-card">
                             <h3 style="margin:0 0 8px 0; font-size:18px;">Follow Us</h3>
-                            <div style="display:flex; gap:12px; margin-top:8px;">
-                                <a href="#" aria-label="Instagram"
-                                    style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:8px; background:#f4f4f6; color:#1a2332; text-decoration:none;">IG</a>
-                                <a href="#" aria-label="Facebook"
-                                    style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:8px; background:#f4f4f6; color:#1a2332; text-decoration:none;">FB</a>
-                                <a href="#" aria-label="Twitter"
-                                    style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:8px; background:#f4f4f6; color:#1a2332; text-decoration:none;">TW</a>
+                            <div class="social-links">
+                                <a href="#" aria-label="Instagram">IG</a>
+                                <a href="#" aria-label="Facebook">FB</a>
+                                <a href="#" aria-label="Twitter">TW</a>
                             </div>
                         </div>
 
-                        <div id="contactMap" style="border-radius:12px; overflow:hidden;">
+                        <div id="contactMap" class="map-embed">
                             <iframe
                                 src="https://maps.google.com/maps?q=New%20York%20City&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                 width="100%" height="260" style="border:0; display:block;" allowfullscreen=""
