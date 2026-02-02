@@ -628,6 +628,39 @@ app.get("/wishlist", requireAuth, (req, res) => {
   res.render("wishlist");
 });
 
+// Category routes
+app.get("/components/suits", requireAuth, (_req, res) => {
+  res.render("components/suits");
+});
+
+app.get("/components/coats", requireAuth, (_req, res) => {
+  res.render("components/coats");
+});
+
+app.get("/components/blazers", requireAuth, (_req, res) => {
+  res.render("components/blazers");
+});
+
+app.get("/components/sharwani", requireAuth, (_req, res) => {
+  res.render("components/sharwani");
+});
+
+app.get("/components/kurtas", requireAuth, (_req, res) => {
+  res.render("components/kurtas");
+});
+
+app.get("/components/waistcoats", requireAuth, (_req, res) => {
+  res.render("components/waistcoats");
+});
+
+app.get("/components/shirts", requireAuth, (_req, res) => {
+  res.render("components/shirts");
+});
+
+app.get("/components/pants", requireAuth, (_req, res) => {
+  res.render("components/pants");
+});
+
 // 404
 app.use((req, res) => res.status(404).send("Not Found"));
 
