@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shirts - Elegant Fashion</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', Arial, sans-serif;
+            background: linear-gradient(135deg, #f7f7f8 0%, #f4e4a6 100%);
+            color: #1a2332;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        header {
+            background: linear-gradient(90deg, #fff 80%, #f4e4a6 100%);
+            box-shadow: 0 10px 30px rgba(26, 35, 50, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid #e8e4e0;
+            border-radius: 0 0 24px 24px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+            padding: 0 15px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        nav {
+            position: absolute;
+            left: 45%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 13px;
+            color: #1a2332;
+            cursor: pointer;
+            padding: 8px 16px;
+            border-radius: 8px 16px 16px 8px;
+        }
+
+        nav button.active,
+        nav button:hover {
+            color: #d4af37;
+        }
+
+        .site-title {
+            font-family: 'Poppins';
+            font-weight: bold;
+            font-size: 28px;
+            color: #1a2332;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-actions button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1a2332;
+            font-size: 18px;
+        }
+
+        main {
+            padding-bottom: 60px;
+        }
+
+        .hero-section {
+            min-height: 60vh;
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.75) 0%, rgba(45, 55, 72, 0.75) 60%, rgba(244, 228, 166, 0.75) 100%), url('https://images.pexels.com/photos/3874589/pexels-photo-3874589.jpeg') center/cover;
+            display: flex;
+            align-items: center;
+            border-radius: 0 0 48px 48px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px 24px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-family: 'Poppins';
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 24px;
+            letter-spacing: 2px;
+        }
+
+        .hero-title span {
+            display: block;
+            background: linear-gradient(90deg, #d4af37, #f4e4a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 56px;
+        }
+
+        .section {
+            padding: 80px 0;
+            background: #fff;
+            border-radius: 32px;
+            margin: 40px 0;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-family: 'Poppins';
+            font-weight: bold;
+            color: #1a2332;
+            margin-bottom: 24px;
+        }
+
+        .section-desc {
+            font-size: 18px;
+            color: #4a5568;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 40px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: 899px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background: linear-gradient(135deg, #fff 80%, #f4e4a6 100%);
+            border-radius: 24px;
+            box-shadow: 0 4px 24px rgba(212, 175, 55, 0.12);
+            overflow: hidden;
+            transition: box-shadow 0.2s, transform 0.2s;
+            border: 2px solid #f4e4a6;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 32px #d4af37;
+            transform: translateY(-8px) scale(1.03);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 256px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 32px 24px 24px 24px;
+        }
+
+        .card-label {
+            display: inline-block;
+            background: linear-gradient(90deg, #d4af37 80%, #f4e4a6 100%);
+            color: #1a2332;
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: 10px;
+            padding: 6px 20px;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 24px;
+            color: #1a2332;
+            margin-bottom: 12px;
+        }
+
+        .card-desc {
+            color: #4a5568;
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+        .card-price {
+            font-size: 20px;
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .card-action-btn {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            background: none;
+            color: #1a2332;
+            cursor: pointer;
+            font-family: 'Poppins';
+        }
+
+        .card-action-btn.add-to-cart {
+            background: linear-gradient(90deg, #d4af37 80%, #f4e4a6 100%);
+            border: none;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #1a2332 80%, #d4af37 100%);
+            color: #fff;
+            padding: 64px 0 32px 0;
+            border-radius: 32px 32px 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 32px;
+        }
+
+        .footer-title {
+            font-family: 'Poppins';
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 18px;
+            color: #f4e4a6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .top-marquee {
+            background: #7a0000;
+            color: #fff;
+            padding: 6px 0;
+            text-align: center;
+            overflow: hidden;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .top-marquee .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: marquee 14s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-marquee">
+        <div class="marquee-content">Free delivery on orders over $50 — limited time offer!</div>
+    </div>
+    <header>
+        <div class="container header-content">
+            <button class="site-title" onclick="location.href='/'">Elegant Fashion</button>
+            <nav>
+                <button onclick="location.href='/'">Home</button>
+                <button onclick="location.href='/products'">Products</button>
+                <button onclick="location.href='/services'">Services</button>
+                <button onclick="location.href='/about'">About</button>
+                <button onclick="location.href='/contact'">Contact</button>
+            </nav>
+            <div class="header-actions">
+                <button>🔍</button>
+                <button>❤️</button>
+                <button>🛒</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Shirts<span>Collection</span></h1>
+                <p style="font-size: 18px; color: #fff; margin-bottom: 24px;">Explore our premium Shirts collection —
+                    quality and comfort.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-title">Shirts</div>
+                <div class="section-desc">Handpicked pieces from our Shirts collection</div>
+                <div class="grid">
+                    <div class="card"><img class="card-img"
+                            src="https://images.pexels.com/photos/3874589/pexels-photo-3874589.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Formal Shirt">
+                        <div class="card-body">
+                            <div class="card-label">New</div>
+                            <div class="card-title">Formal Shirt</div>
+                            <div class="card-desc">Premium formal shirt for business wear.</div>
+                            <div class="card-price">$79.99</div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                        </div>
+                    </div>
+                    <div class="card"><img class="card-img"
+                            src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Casual Shirt">
+                        <div class="card-body">
+                            <div class="card-label">Sale</div>
+                            <div class="card-title">Casual Shirt</div>
+                            <div class="card-desc">Comfortable casual shirt for daily wear.</div>
+                            <div class="card-price">$59.99</div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                        </div>
+                    </div>
+                    <div class="card"><img class="card-img"
+                            src="https://images.pexels.com/photos/2733446/pexels-photo-2733446.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Oxford Shirt">
+                        <div class="card-body">
+                            <div class="card-label">New</div>
+                            <div class="card-title">Oxford Shirt</div>
+                            <div class="card-desc">Classic oxford cloth shirt with fine quality.</div>
+                            <div class="card-price">$89.99</div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                        </div>
+                    </div>
+                    <div class="card"><img class="card-img"
+                            src="https://images.pexels.com/photos/1389460/pexels-photo-1389460.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Dress Shirt">
+                        <div class="card-body">
+                            <div class="card-label">New</div>
+                            <div class="card-title">Dress Shirt</div>
+                            <div class="card-desc">Elegant dress shirt for special occasions.</div>
+                            <div class="card-price">$99.99</div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-title">Elegant Fashion</div>
+                    <p>Crafting timeless elegance.</p>
+                </div>
+                <div>
+                    <div class="footer-title">Quick Links</div>
+                    <ul style="list-style:none; padding:0;">
+                        <li><a href="/" style="color:#fff; text-decoration:none;">Home</a></li>
+                        <li><a href="/products" style="color:#fff; text-decoration:none;">Products</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-title">Categories</div>
+                    <ul style="list-style:none; padding:0;">
+                        <li><a href="/category/shirts" style="color:#fff; text-decoration:none;">Shirts</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-title">Support</div>
+                    <ul style="list-style:none; padding:0;">
+                        <li><a href="/contact" style="color:#fff; text-decoration:none;">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2024 Elegant Fashion. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+
+</html>
