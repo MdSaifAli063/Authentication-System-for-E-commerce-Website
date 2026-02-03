@@ -146,6 +146,7 @@ Diagnostics:
 
 ---
 
+
 ## 🧩 Forms & Templates
 
 All EJS templates live in public/ and are rendered by Express:
