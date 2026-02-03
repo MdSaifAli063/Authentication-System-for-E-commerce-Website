@@ -121,6 +121,7 @@ Health checks:
 
 ---
 
+
 ## 🧭 Routing Overview
 
 Pages (render EJS from public/):
