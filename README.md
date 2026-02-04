@@ -46,6 +46,7 @@ Production-ready Node.js + Express authentication flow for an e‑commerce site.
 
 ---
 
+
 ## 🧱 Tech Stack
 
 - Node.js, Express
@@ -78,6 +79,7 @@ Note:
 
 ---
 
+
 ## ✅ Prerequisites
 
 - Node.js 18+ (recommended)
@@ -85,6 +87,7 @@ Note:
 - npm
 
 ---
+
 
 ## ⚙️ Environment Variables
 
@@ -98,6 +101,7 @@ Create a .env file (optional, or set environment variables in your host):
 The code also has safe defaults if env vars are not provided.
 
 ---
+
 
 ## 🚀 Setup & Run
 
@@ -117,6 +121,7 @@ Health checks:
 - /session -> current session/user snapshot (useful while testing)
 
 ---
+
 
 ## 🧭 Routing Overview
 
@@ -140,6 +145,7 @@ Diagnostics:
 - /health, /whoami, /session
 
 ---
+
 
 ## 🧩 Forms & Templates
 
@@ -235,6 +241,7 @@ Check session:
 - The app logs the password reset link to the console (for development). Hook an email service in production.
 
 ---
+
 
 ## 📄 License
 
