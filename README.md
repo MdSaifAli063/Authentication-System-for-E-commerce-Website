@@ -63,6 +63,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
+<<<<<<< HEAD
 📌 Notes for deployment
 
 - Use a persistent session store (connect-mongo or Redis) in production
@@ -77,6 +78,45 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 - Tests / mocks: password reset link logs to console in dev
 - Use the included body normalizer to support alternate form field names
 - EJS partials can be added under public/ for reusable UI (header/footer/back-to-home)
+=======
+## 🧱 Tech Stack
+
+- Node.js, Express
+- EJS (templates in public/)
+- express-session
+- bcrypt
+- crypto
+- MongoDB + Mongoose (via src/config.js that exports { User, mongoose })
+  
+---
+
+## 📂 Project Structure
+
+Example layout:
+- /public
+  - home.ejs
+  - login.ejs
+  - signup.ejs
+  - forgot-password.ejs
+  - reset-password.ejs
+  - js/ and css/ assets you reference via /static/...
+- /src
+  - index.js (Express app)
+  - config.js (exports { User, mongoose })
+- package.json
+- README.md
+
+Note:
+- The app renders EJS templates from public, and serves static assets at /static from the same directory. For security, consider serving only an assets subfolder as static in production (see Hardening section).
+
+---
+
+## ✅ Prerequisites
+
+- Node.js 18+ (recommended)
+- MongoDB connection string (Atlas or local)
+- npm
+>>>>>>> 9d3e40383fff30c7176018d8f48f30e3897f43d8
 
 ---
 
