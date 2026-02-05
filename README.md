@@ -63,7 +63,6 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-<<<<<<< HEAD
 📌 Notes for deployment
 
 - Use a persistent session store (connect-mongo or Redis) in production
@@ -78,7 +77,9 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 - Tests / mocks: password reset link logs to console in dev
 - Use the included body normalizer to support alternate form field names
 - EJS partials can be added under public/ for reusable UI (header/footer/back-to-home)
-=======
+
+---
+
 ## 🧱 Tech Stack
 
 - Node.js, Express
@@ -116,7 +117,6 @@ Note:
 - Node.js 18+ (recommended)
 - MongoDB connection string (Atlas or local)
 - npm
->>>>>>> 9d3e40383fff30c7176018d8f48f30e3897f43d8
 
 ---
 
