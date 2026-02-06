@@ -778,51 +778,52 @@
             color: #d4af37;
             text-decoration: underline;
         }
+
         .footer-left-social {
-      margin-top: 24px;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
+            margin-top: 24px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
 
-    .footer-left-social a {
-      display: inline-flex;
-      width: 40px;
-      height: 40px;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      color: #fff;
-      text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
-    }
+        .footer-left-social a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+        }
 
-    .footer-left-social a.fb {
-      background: #1877F2;
-    }
+        .footer-left-social a.fb {
+            background: #1877F2;
+        }
 
-    .footer-left-social a.ig {
-      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    }
+        .footer-left-social a.ig {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
 
-    .footer-left-social a.tw {
-      background: #1DA1F2;
-    }
+        .footer-left-social a.tw {
+            background: #1DA1F2;
+        }
 
-    .footer-left-social a.li {
-      background: #0A66C2;
-    }
+        .footer-left-social a.li {
+            background: #0A66C2;
+        }
 
-    .footer-left-social a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
-    }
+        .footer-left-social a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+        }
 
-    @media (max-width: 900px) {
-      .footer-left-social {
-        justify-content: center;
-      }
-    }
+        @media (max-width: 900px) {
+            .footer-left-social {
+                justify-content: center;
+            }
+        }
 
         @media (max-width: 900px) {
             .footer-content {
@@ -1358,13 +1359,13 @@
             document
                 .querySelector('.header-actions button[title="Cart"]')
                 ?.addEventListener("click", () => {
-                    alert("Cart is currently empty.");
+                    location.href = '/cart';
                 });
 
             document
                 .querySelector('.header-actions button[title="Wishlist"]')
                 ?.addEventListener("click", () => {
-                    alert("Wishlist is currently empty.");
+                    location.href = '/wishlist';
                 });
 
             // Account dropdown (Log in / Sign up / Profile / Orders / Logout)
