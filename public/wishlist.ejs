@@ -778,51 +778,52 @@
             color: #d4af37;
             text-decoration: underline;
         }
+
         .footer-left-social {
-      margin-top: 24px;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
+            margin-top: 24px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
 
-    .footer-left-social a {
-      display: inline-flex;
-      width: 40px;
-      height: 40px;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      color: #fff;
-      text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
-    }
+        .footer-left-social a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+        }
 
-    .footer-left-social a.fb {
-      background: #1877F2;
-    }
+        .footer-left-social a.fb {
+            background: #1877F2;
+        }
 
-    .footer-left-social a.ig {
-      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    }
+        .footer-left-social a.ig {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
 
-    .footer-left-social a.tw {
-      background: #1DA1F2;
-    }
+        .footer-left-social a.tw {
+            background: #1DA1F2;
+        }
 
-    .footer-left-social a.li {
-      background: #0A66C2;
-    }
+        .footer-left-social a.li {
+            background: #0A66C2;
+        }
 
-    .footer-left-social a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
-    }
+        .footer-left-social a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+        }
 
-    @media (max-width: 900px) {
-      .footer-left-social {
-        justify-content: center;
-      }
-    }
+        @media (max-width: 900px) {
+            .footer-left-social {
+                justify-content: center;
+            }
+        }
 
         @media (max-width: 900px) {
             .footer-content {
@@ -1035,19 +1036,39 @@
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Your
-                    <span>Wishlist</span>
-                </h1>
-                <p class="hero-desc">
-                    Saved items for later.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn-gold">Browse Products</button>
-                    <button class="btn-secondary">Clear Wishlist</button>
+        <section class="hero-section"
+            style="background: linear-gradient(90deg, #0f172a 0%, #1a2332 100%); padding: 100px 32px 60px 32px; position: relative; overflow: visible; width: 100vw; margin-left: calc(-50vw + 50%); min-height: 60vh; display: flex; align-items: center; margin-top: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); border-radius: 0;">
+            <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2); top: 0;">
+            </div>
+            <div class="container"
+                style="position: relative; z-index: 1; text-align: center; width: 100%; max-width: 1200px; margin: 0 auto;">
+                <div style="margin-bottom: 40px;">
+                    <h1
+                        style="font-size: 70px; font-family: 'Poppins', Arial, sans-serif; font-weight: 900; color: #d4af37; margin: 0 0 24px 0; line-height: 1.1; letter-spacing: 3px; text-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);">
+                        Your Wishlist
+                    </h1>
+                    <p
+                        style="font-size: 18px; color: #cbd5e1; margin: 0 0 40px 0; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+                        Your curated collection of favorite items. Add them to cart or share with friends.
+                    </p>
+                </div>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                    <button class="btn-gold" style="padding: 14px 40px; font-size: 15px;">Browse Products</button>
+                    <button class="btn-secondary" style="padding: 14px 40px; font-size: 15px;">Clear Wishlist</button>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
+                    <div style="color: #fff; text-align: center;">
+                        <div style="font-size: 36px; font-weight: 900; color: #d4af37; margin-bottom: 8px;">❤️</div>
+                        <div style="font-size: 14px; color: #cbd5e1;">Favorites Saved</div>
+                    </div>
+                    <div style="color: #fff; text-align: center;">
+                        <div style="font-size: 36px; font-weight: 900; color: #d4af37; margin-bottom: 8px;">👥</div>
+                        <div style="font-size: 14px; color: #cbd5e1;">Share with Friends</div>
+                    </div>
+                    <div style="color: #fff; text-align: center;">
+                        <div style="font-size: 36px; font-weight: 900; color: #d4af37; margin-bottom: 8px;">🎁</div>
+                        <div style="font-size: 14px; color: #cbd5e1;">Perfect Gifts</div>
+                    </div>
                 </div>
             </div>
         </section>
