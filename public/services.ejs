@@ -451,13 +451,14 @@
         }
 
         .hero-section {
-            min-height: 80vh;
             background: linear-gradient(135deg, #1a2332 0%, #2d3748 60%, #f4e4a6 100%);
-            display: flex;
+            padding: 80px 0;
+            margin-top: 0;
+            margin-bottom: 60px;
             align-items: center;
             position: relative;
             border-radius: 0 0 48px 48px;
-            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.08);
+            overflow: hidden;
         }
 
         .hero-overlay {
@@ -1030,19 +1031,40 @@
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Our
-                    <span>Services</span>
-                </h1>
-                <p class="hero-desc">
-                    Tailoring and customization services.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn-gold">Book Now</button>
-                    <button class="btn-secondary">Learn More</button>
+        <section class="hero-section"
+            style="background: linear-gradient(90deg, #0f172a 0%, #1a2332 100%); padding: 100px 32px 60px 32px; position: relative; overflow: visible; width: 100vw; margin-left: calc(-50vw + 50%); min-height: 60vh; display: flex; align-items: center; margin-top: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); border-radius: 0;">
+            <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2); top: 0;">
+            </div>
+            <div class="container"
+                style="position: relative; z-index: 1; text-align: center; width: 100%; max-width: 1200px; margin: 0 auto;">
+                <div style="margin-bottom: 40px;">
+                    <h1
+                        style="font-size: 70px; font-family: 'Poppins', Arial, sans-serif; font-weight: 900; color: #d4af37; margin: 0 0 24px 0; line-height: 1.1; letter-spacing: 3px; text-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);">
+                        Our Premium Services
+                    </h1>
+                    <p
+                        style="font-size: 18px; color: #cbd5e1; margin: 0 0 40px 0; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+                        Professional tailoring, custom alterations, and personalized styling to transform your wardrobe
+                        with precision and excellence.
+                    </p>
+                </div>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                    <button class="btn-gold" style="padding: 14px 40px; font-size: 15px;">Book Now</button>
+                    <button class="btn-secondary" style="padding: 14px 40px; font-size: 15px;">Learn More</button>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
+                    <div style="color: #fff; text-align: center;">
+                        <div style="font-size: 36px; font-weight: 900; color: #d4af37; margin-bottom: 8px;">10+</div>
+                        <div style="font-size: 14px; color: #cbd5e1;">Service Types</div>
+                    </div>
+                    <div style="color: #fff; text-align: center;">
+                        <div style="font-size: 36px; font-weight: 900; color: #d4af37; margin-bottom: 8px;">5000+</div>
+                        <div style="font-size: 14px; color: #cbd5e1;">Happy Clients</div>
+                    </div>
+                    <div style="color: #fff; text-align: center;">
+                        <div style="font-size: 36px; font-weight: 900; color: #d4af37; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+                        <div style="font-size: 14px; color: #cbd5e1;">Excellence Assured</div>
+                    </div>
                 </div>
             </div>
         </section>
