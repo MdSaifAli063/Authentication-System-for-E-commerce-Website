@@ -487,11 +487,37 @@
     <%- include('./_back-to-home') %>
 
         <main>
-            <section class="hero-section">
-                <div class="hero-content">
-                    <h1 class="hero-title">Suits<span>Collection</span></h1>
-                    <p style="font-size: 18px; color: #fff; margin-bottom: 24px;">Explore our premium Suits collection —
-                        crafted with elegance and style.</p>
+            <section class="hero-section"
+                style="background: linear-gradient(90deg, #0f172a 0%, #1a2332 100%); padding: 100px 32px 60px 32px; position: relative; overflow: visible; width: 100vw; margin-left: calc(-50vw + 50%); min-height: 60vh; display: flex; align-items: center; margin-top: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); border-radius: 0;">
+                <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2); top: 0;"></div>
+                <div class="container"
+                    style="position: relative; z-index: 1; text-align: center; width: 100%; max-width: 1200px; margin: 0 auto;">
+                    <div style="margin-bottom: 40px;">
+                        <h1
+                            style="font-size: 70px; font-family: 'Poppins', Arial, sans-serif; font-weight: 900; color: #d4af37; margin: 0 0 24px 0; line-height: 1.1; letter-spacing: 3px; text-shadow: 0 6px 20px rgba(0,0,0,0.4);">
+                            Suits Collection</h1>
+                        <p
+                            style="font-size: 18px; color: #cbd5e1; margin: 0 0 40px 0; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+                            Handcrafted suits with superior fit and timeless style for every formal occasion.</p>
+                    </div>
+                    <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-bottom:40px;">
+                        <button class="btn-gold" style="padding:14px 40px; font-size:15px;">Shop Now</button>
+                        <button class="btn-secondary" style="padding:14px 40px; font-size:15px;">Explore</button>
+                    </div>
+                    <div style="display:flex; justify-content:center; gap:50px; flex-wrap:wrap;">
+                        <div style="color:#fff; text-align:center;">
+                            <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">100+</div>
+                            <div style="font-size:14px; color:#cbd5e1;">Tailored Fits</div>
+                        </div>
+                        <div style="color:#fff; text-align:center;">
+                            <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">Savile</div>
+                            <div style="font-size:14px; color:#cbd5e1;">Inspired Cuts</div>
+                        </div>
+                        <div style="color:#fff; text-align:center;">
+                            <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">Expert</div>
+                            <div style="font-size:14px; color:#cbd5e1;">Tailors</div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -501,123 +527,159 @@
                     <div class="section-desc">Handpicked pieces from our Suits collection</div>
                     <div class="grid">
                         <!-- 12 collection cards: 4 per row -->
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+1" alt="Premium Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+1"
+                                alt="Premium Suit">
                             <div class="card-body">
                                 <div class="card-label">New</div>
                                 <div class="card-title">Premium Suit</div>
                                 <div class="card-desc">Classic premium suit perfect for any occasion.</div>
                                 <div class="card-price">$349.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+2" alt="Slim Fit Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+2"
+                                alt="Slim Fit Suit">
                             <div class="card-body">
                                 <div class="card-label">Sale</div>
                                 <div class="card-title">Slim Fit Suit</div>
                                 <div class="card-desc">Modern slim-fit suit with contemporary style.</div>
                                 <div class="card-price">$299.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+3" alt="Executive Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+3"
+                                alt="Executive Suit">
                             <div class="card-body">
                                 <div class="card-label">New</div>
                                 <div class="card-title">Executive Suit</div>
                                 <div class="card-desc">Premium executive suit for business professionals.</div>
                                 <div class="card-price">$399.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+4" alt="Casual Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+4"
+                                alt="Casual Suit">
                             <div class="card-body">
                                 <div class="card-label">New</div>
                                 <div class="card-title">Casual Suit</div>
                                 <div class="card-desc">Comfortable casual suit for everyday wear.</div>
                                 <div class="card-price">$279.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+5" alt="Tailored Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+5"
+                                alt="Tailored Suit">
                             <div class="card-body">
                                 <div class="card-label">Tailored</div>
                                 <div class="card-title">Tailored Suit</div>
                                 <div class="card-desc">Sharp tailored suit for the office.</div>
                                 <div class="card-price">$329.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+6" alt="Wool Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+6"
+                                alt="Wool Suit">
                             <div class="card-body">
                                 <div class="card-label">Luxury</div>
                                 <div class="card-title">Wool Suit</div>
                                 <div class="card-desc">Premium wool suit for cooler seasons.</div>
                                 <div class="card-price">$379.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+7" alt="Travel Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+7"
+                                alt="Travel Suit">
                             <div class="card-body">
                                 <div class="card-label">Travel</div>
                                 <div class="card-title">Wrinkle-Resistant Suit</div>
                                 <div class="card-desc">Perfect for travel and business trips.</div>
                                 <div class="card-price">$289.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+8" alt="Summer Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+8"
+                                alt="Summer Suit">
                             <div class="card-body">
                                 <div class="card-label">Summer</div>
                                 <div class="card-title">Linen Suit</div>
                                 <div class="card-desc">Lightweight linen suit for warm days.</div>
                                 <div class="card-price">$249.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+9" alt="Patterned Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+9"
+                                alt="Patterned Suit">
                             <div class="card-body">
                                 <div class="card-label">Statement</div>
                                 <div class="card-title">Patterned Suit</div>
                                 <div class="card-desc">Stand out with bold patterns.</div>
                                 <div class="card-price">$359.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+10" alt="Eco Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+10"
+                                alt="Eco Suit">
                             <div class="card-body">
                                 <div class="card-label">Eco</div>
                                 <div class="card-title">Sustainable Suit</div>
                                 <div class="card-desc">Made from recycled fabrics.</div>
                                 <div class="card-price">$219.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+11" alt="Italian Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+11"
+                                alt="Italian Suit">
                             <div class="card-body">
                                 <div class="card-label">Luxury</div>
                                 <div class="card-title">Italian Cut Suit</div>
                                 <div class="card-desc">Premium Italian tailoring and fabric.</div>
                                 <div class="card-price">$499.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+12" alt="Limited Suit">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Suits+12"
+                                alt="Limited Suit">
                             <div class="card-body">
                                 <div class="card-label">Limited</div>
                                 <div class="card-title">Limited Edition Suit</div>
                                 <div class="card-desc">Exclusive limited-run designs.</div>
                                 <div class="card-price">$599.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
                     </div>
