@@ -486,11 +486,38 @@
 <body>
     <%- include('./_back-to-home') %>
         <main>
-            <section class="hero-section">
-                <div class="hero-content">
-                    <h1 class="hero-title">Coats<span>Collection</span></h1>
-                    <p style="font-size: 18px; color: #fff; margin-bottom: 24px;">Explore our premium Coats collection —
-                        stylish warmth and elegance.</p>
+            <section class="hero-section"
+                style="background: linear-gradient(90deg, #0f172a 0%, #1a2332 100%); padding: 100px 32px 60px 32px; position: relative; overflow: visible; width: 100vw; margin-left: calc(-50vw + 50%); min-height: 60vh; display: flex; align-items: center; margin-top: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); border-radius: 0;">
+                <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2); top: 0;"></div>
+                <div class="container"
+                    style="position: relative; z-index: 1; text-align: center; width: 100%; max-width: 1200px; margin: 0 auto;">
+                    <div style="margin-bottom: 40px;">
+                        <h1
+                            style="font-size: 70px; font-family: 'Poppins', Arial, sans-serif; font-weight: 900; color: #d4af37; margin: 0 0 24px 0; line-height: 1.1; letter-spacing: 3px; text-shadow: 0 6px 20px rgba(0,0,0,0.4);">
+                            Coats Collection</h1>
+                        <p
+                            style="font-size: 18px; color: #cbd5e1; margin: 0 0 40px 0; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+                            Stylish outerwear designed to keep you warm and elegant through the seasons.</p>
+                    </div>
+                    <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-bottom:40px;">
+                        <button class="btn-gold" style="padding:14px 40px; font-size:15px;">Shop Now</button>
+                        <button class="btn-secondary" style="padding:14px 40px; font-size:15px;">Explore</button>
+                    </div>
+                    <div style="display:flex; justify-content:center; gap:50px; flex-wrap:wrap;">
+                        <div style="color:#fff; text-align:center;">
+                            <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">120+</div>
+                            <div style="font-size:14px; color:#cbd5e1;">Outerwear Styles</div>
+                        </div>
+                        <div style="color:#fff; text-align:center;">
+                            <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">Wool</div>
+                            <div style="font-size:14px; color:#cbd5e1;">Premium Materials</div>
+                        </div>
+                        <div style="color:#fff; text-align:center;">
+                            <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">Tailored
+                            </div>
+                            <div style="font-size:14px; color:#cbd5e1;">Expert Fit</div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="section">
@@ -499,123 +526,159 @@
                     <div class="section-desc">Handpicked pieces from our Coats collection</div>
                     <div class="grid">
                         <!-- 12 collection cards: 4 per row -->
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+1" alt="Winter Coat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+1"
+                                alt="Winter Coat">
                             <div class="card-body">
                                 <div class="card-label">New</div>
                                 <div class="card-title">Winter Coat</div>
                                 <div class="card-desc">Premium winter coat with premium materials.</div>
                                 <div class="card-price">$249.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+2" alt="Formal Coat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+2"
+                                alt="Formal Coat">
                             <div class="card-body">
                                 <div class="card-label">Sale</div>
                                 <div class="card-title">Formal Coat</div>
                                 <div class="card-desc">Elegant formal coat for special occasions.</div>
                                 <div class="card-price">$299.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+3" alt="Casual Coat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+3"
+                                alt="Casual Coat">
                             <div class="card-body">
                                 <div class="card-label">New</div>
                                 <div class="card-title">Casual Coat</div>
                                 <div class="card-desc">Comfortable casual coat for daily wear.</div>
                                 <div class="card-price">$199.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+4" alt="Blazer Coat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+4"
+                                alt="Blazer Coat">
                             <div class="card-body">
                                 <div class="card-label">New</div>
                                 <div class="card-title">Blazer Coat</div>
                                 <div class="card-desc">Stylish blazer coat for professional look.</div>
                                 <div class="card-price">$229.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+5" alt="Trench Coat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+5"
+                                alt="Trench Coat">
                             <div class="card-body">
                                 <div class="card-label">Classic</div>
                                 <div class="card-title">Trench Coat</div>
                                 <div class="card-desc">A timeless trench for rainy days.</div>
                                 <div class="card-price">$199.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+6" alt="Wool Coat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+6"
+                                alt="Wool Coat">
                             <div class="card-body">
                                 <div class="card-label">Warm</div>
                                 <div class="card-title">Wool Coat</div>
                                 <div class="card-desc">Insulated wool coat for cold weather.</div>
                                 <div class="card-price">$259.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+7" alt="Field Coat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+7"
+                                alt="Field Coat">
                             <div class="card-body">
                                 <div class="card-label">Utility</div>
                                 <div class="card-title">Field Coat</div>
                                 <div class="card-desc">Durable coat with practical pockets.</div>
                                 <div class="card-price">$179.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+8" alt="Peacoat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+8"
+                                alt="Peacoat">
                             <div class="card-body">
                                 <div class="card-label">Style</div>
                                 <div class="card-title">Peacoat</div>
                                 <div class="card-desc">Classic double-breasted peacoat.</div>
                                 <div class="card-price">$219.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+9" alt="Raincoat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+9"
+                                alt="Raincoat">
                             <div class="card-body">
                                 <div class="card-label">Rain</div>
                                 <div class="card-title">Raincoat</div>
                                 <div class="card-desc">Waterproof protection for wet days.</div>
                                 <div class="card-price">$149.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+10" alt="Sustainable Coat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+10"
+                                alt="Sustainable Coat">
                             <div class="card-body">
                                 <div class="card-label">Eco</div>
                                 <div class="card-title">Sustainable Coat</div>
                                 <div class="card-desc">Made from recycled materials.</div>
                                 <div class="card-price">$189.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+11" alt="Designer Coat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+11"
+                                alt="Designer Coat">
                             <div class="card-body">
                                 <div class="card-label">Luxury</div>
                                 <div class="card-title">Designer Coat</div>
                                 <div class="card-desc">Premium designer outerwear.</div>
                                 <div class="card-price">$329.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+12" alt="Limited Coat">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Coat+12"
+                                alt="Limited Coat">
                             <div class="card-body">
                                 <div class="card-label">Limited</div>
                                 <div class="card-title">Limited Edition Coat</div>
                                 <div class="card-desc">Exclusive seasonal release.</div>
                                 <div class="card-price">$399.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
                     </div>
