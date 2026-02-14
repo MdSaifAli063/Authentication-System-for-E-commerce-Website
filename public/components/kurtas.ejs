@@ -486,12 +486,40 @@
 <body>
     <%- include('./_back-to-home') %>
         <main>
-            <section class="hero-section">
-                <div class="hero-content">
-                    <h1 class="hero-title">Kurtas<span>Collection</span></h1>
-                    <p style="font-size: 18px; color: #fff; margin-bottom: 24px;">Explore our premium Kurtas collection
-                        —
-                        traditional comfort.</p>
+            <section class="hero-section"
+                style="background: linear-gradient(90deg, #0f172a 0%, #1a2332 100%); padding: 100px 32px 60px 32px; position: relative; overflow: visible; width: 100vw; margin-left: calc(-50vw + 50%); min-height: 60vh; display: flex; align-items: center; margin-top: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); border-radius: 0;">
+                <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2); top: 0;"></div>
+                <div class="container"
+                    style="position: relative; z-index: 1; text-align: center; width: 100%; max-width: 1200px; margin: 0 auto;">
+                    <div style="margin-bottom: 40px;">
+                        <h1
+                            style="font-size: 70px; font-family: 'Poppins', Arial, sans-serif; font-weight: 900; color: #d4af37; margin: 0 0 24px 0; line-height: 1.1; letter-spacing: 3px; text-shadow: 0 6px 20px rgba(0,0,0,0.4);">
+                            Kurtas Collection</h1>
+                        <p
+                            style="font-size: 18px; color: #cbd5e1; margin: 0 0 40px 0; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+                            Traditional kurtas blending heritage techniques with modern comfort for special occasions.
+                        </p>
+                    </div>
+                    <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-bottom:40px;">
+                        <button class="btn-gold" style="padding:14px 40px; font-size:15px;">Shop Now</button>
+                        <button class="btn-secondary" style="padding:14px 40px; font-size:15px;">Explore</button>
+                    </div>
+                    <div style="display:flex; justify-content:center; gap:50px; flex-wrap:wrap;">
+                        <div style="color:#fff; text-align:center;">
+                            <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">80+</div>
+                            <div style="font-size:14px; color:#cbd5e1;">Designs</div>
+                        </div>
+                        <div style="color:#fff; text-align:center;">
+                            <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">Handmade
+                            </div>
+                            <div style="font-size:14px; color:#cbd5e1;">Embroidery</div>
+                        </div>
+                        <div style="color:#fff; text-align:center;">
+                            <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">Festive
+                            </div>
+                            <div style="font-size:14px; color:#cbd5e1;">Ready-to-Wear</div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="section">
@@ -500,123 +528,159 @@
                     <div class="section-desc">Handpicked pieces from our Kurtas collection</div>
                     <div class="grid">
                         <!-- 12 collection cards: 4 per row -->
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+1" alt="Premium Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+1"
+                                alt="Premium Kurta">
                             <div class="card-body">
                                 <div class="card-label">New</div>
                                 <div class="card-title">Premium Kurta</div>
                                 <div class="card-desc">Luxurious premium kurta with fine craftsmanship.</div>
                                 <div class="card-price">$149.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+2" alt="Classic Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+2"
+                                alt="Classic Kurta">
                             <div class="card-body">
                                 <div class="card-label">Sale</div>
                                 <div class="card-title">Classic Kurta</div>
                                 <div class="card-desc">Timeless classic kurta perfect for daily wear.</div>
                                 <div class="card-price">$99.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+3" alt="Silk Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+3"
+                                alt="Silk Kurta">
                             <div class="card-body">
                                 <div class="card-label">New</div>
                                 <div class="card-title">Silk Kurta</div>
                                 <div class="card-desc">Soft silk kurta with elegant embroidery.</div>
                                 <div class="card-price">$179.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+4" alt="Formal Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+4"
+                                alt="Formal Kurta">
                             <div class="card-body">
                                 <div class="card-label">New</div>
                                 <div class="card-title">Formal Kurta</div>
                                 <div class="card-desc">Formal kurta for ceremonies and events.</div>
                                 <div class="card-price">$199.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+5" alt="Pathani Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+5"
+                                alt="Pathani Kurta">
                             <div class="card-body">
                                 <div class="card-label">Classic</div>
                                 <div class="card-title">Pathani Kurta</div>
                                 <div class="card-desc">Long-line kurta with strong silhouette.</div>
                                 <div class="card-price">$69.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+6" alt="Anarkali Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+6"
+                                alt="Anarkali Kurta">
                             <div class="card-body">
                                 <div class="card-label">Elegant</div>
                                 <div class="card-title">Anarkali Kurta</div>
                                 <div class="card-desc">Flowing kurta with fine tailoring.</div>
                                 <div class="card-price">$99.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+7" alt="Short Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+7"
+                                alt="Short Kurta">
                             <div class="card-body">
                                 <div class="card-label">Casual</div>
                                 <div class="card-title">Short Kurta</div>
                                 <div class="card-desc">Relaxed short kurta for daily styling.</div>
                                 <div class="card-price">$44.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+8" alt="Embellished Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+8"
+                                alt="Embellished Kurta">
                             <div class="card-body">
                                 <div class="card-label">Occasion</div>
                                 <div class="card-title">Embellished Kurta</div>
                                 <div class="card-desc">Decorative details for celebrations.</div>
                                 <div class="card-price">$119.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+9" alt="Bandhgala Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+9"
+                                alt="Bandhgala Kurta">
                             <div class="card-body">
                                 <div class="card-label">Formal</div>
                                 <div class="card-title">Bandhgala Kurta</div>
                                 <div class="card-desc">A refined collar for formal functions.</div>
                                 <div class="card-price">$129.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+10" alt="Handloom Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+10"
+                                alt="Handloom Kurta">
                             <div class="card-body">
                                 <div class="card-label">Artisan</div>
                                 <div class="card-title">Handloom Kurta</div>
                                 <div class="card-desc">Handwoven fabrics supporting artisans.</div>
                                 <div class="card-price">$89.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+11" alt="Designer Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+11"
+                                alt="Designer Kurta">
                             <div class="card-body">
                                 <div class="card-label">Designer</div>
                                 <div class="card-title">Designer Kurta</div>
                                 <div class="card-desc">Exclusive designer pieces.</div>
                                 <div class="card-price">$159.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
 
-                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+12" alt="Limited Kurta">
+                        <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Kurta+12"
+                                alt="Limited Kurta">
                             <div class="card-body">
                                 <div class="card-label">Limited</div>
                                 <div class="card-title">Limited Kurta</div>
                                 <div class="card-desc">Seasonal limited edition kurta.</div>
                                 <div class="card-price">$179.99</div>
-                                <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                                <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                        onclick="alert('Added to cart!')">Add to Cart</button><button
+                                        class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                             </div>
                         </div>
                     </div>
