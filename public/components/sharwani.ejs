@@ -485,11 +485,37 @@
 
 <body>
     <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">Sharwani<span>Collection</span></h1>
-                <p style="font-size: 18px; color: #fff; margin-bottom: 24px;">Explore our premium Sharwani collection —
-                    traditional elegance.</p>
+        <section class="hero-section"
+            style="background: linear-gradient(90deg, #0f172a 0%, #1a2332 100%); padding: 100px 32px 60px 32px; position: relative; overflow: visible; width: 100vw; margin-left: calc(-50vw + 50%); min-height: 60vh; display: flex; align-items: center; margin-top: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); border-radius: 0;">
+            <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2); top: 0;"></div>
+            <div class="container"
+                style="position: relative; z-index: 1; text-align: center; width: 100%; max-width: 1200px; margin: 0 auto;">
+                <div style="margin-bottom: 40px;">
+                    <h1
+                        style="font-size: 70px; font-family: 'Poppins', Arial, sans-serif; font-weight: 900; color: #d4af37; margin: 0 0 24px 0; line-height: 1.1; letter-spacing: 3px; text-shadow: 0 6px 20px rgba(0,0,0,0.4);">
+                        Sharwani Collection</h1>
+                    <p
+                        style="font-size: 18px; color: #cbd5e1; margin: 0 0 40px 0; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+                        Regal sharwanis crafted with intricate detail — perfect for weddings and grand occasions.</p>
+                </div>
+                <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-bottom:40px;">
+                    <button class="btn-gold" style="padding:14px 40px; font-size:15px;">Shop Now</button>
+                    <button class="btn-secondary" style="padding:14px 40px; font-size:15px;">Explore</button>
+                </div>
+                <div style="display:flex; justify-content:center; gap:50px; flex-wrap:wrap;">
+                    <div style="color:#fff; text-align:center;">
+                        <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">50+</div>
+                        <div style="font-size:14px; color:#cbd5e1;">Exquisite Pieces</div>
+                    </div>
+                    <div style="color:#fff; text-align:center;">
+                        <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">Bespoke</div>
+                        <div style="font-size:14px; color:#cbd5e1;">Custom Options</div>
+                    </div>
+                    <div style="color:#fff; text-align:center;">
+                        <div style="font-size:36px; font-weight:900; color:#d4af37; margin-bottom:8px;">Handwork</div>
+                        <div style="font-size:14px; color:#cbd5e1;">Intricate Embroidery</div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section">
@@ -498,123 +524,159 @@
                 <div class="section-desc">Handpicked pieces from our Sharwani collection</div>
                 <div class="grid">
                     <!-- 12 collection cards: 4 per row -->
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+1" alt="Royal Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+1"
+                            alt="Royal Sharwani">
                         <div class="card-body">
                             <div class="card-label">New</div>
                             <div class="card-title">Royal Sharwani</div>
                             <div class="card-desc">Premium royal sharwani with intricate embroidery.</div>
                             <div class="card-price">$399.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+2" alt="Traditional Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+2"
+                            alt="Traditional Sharwani">
                         <div class="card-body">
                             <div class="card-label">Sale</div>
                             <div class="card-title">Traditional Sharwani</div>
                             <div class="card-desc">Classic traditional sharwani with elegant design.</div>
                             <div class="card-price">$349.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+3" alt="Modern Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+3"
+                            alt="Modern Sharwani">
                         <div class="card-body">
                             <div class="card-label">New</div>
                             <div class="card-title">Modern Sharwani</div>
                             <div class="card-desc">Contemporary modern sharwani with sleek style.</div>
                             <div class="card-price">$329.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+4" alt="Wedding Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+4"
+                            alt="Wedding Sharwani">
                         <div class="card-body">
                             <div class="card-label">New</div>
                             <div class="card-title">Wedding Sharwani</div>
                             <div class="card-desc">Luxurious wedding sharwani for special occasions.</div>
                             <div class="card-price">$449.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+5" alt="Embroidered Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+5"
+                            alt="Embroidered Sharwani">
                         <div class="card-body">
                             <div class="card-label">Festive</div>
                             <div class="card-title">Embroidered Sharwani</div>
                             <div class="card-desc">Detailed embroidered pieces for celebrations.</div>
                             <div class="card-price">$379.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+6" alt="Velvet Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+6"
+                            alt="Velvet Sharwani">
                         <div class="card-body">
                             <div class="card-label">Luxury</div>
                             <div class="card-title">Velvet Sharwani</div>
                             <div class="card-desc">Rich velvet textures for a regal presence.</div>
                             <div class="card-price">$429.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+7" alt="Designer Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+7"
+                            alt="Designer Sharwani">
                         <div class="card-body">
                             <div class="card-label">Designer</div>
                             <div class="card-title">Designer Sharwani</div>
                             <div class="card-desc">Exclusive designer pieces with modern cuts.</div>
                             <div class="card-price">$499.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+8" alt="Classic Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+8"
+                            alt="Classic Sharwani">
                         <div class="card-body">
                             <div class="card-label">Classic</div>
                             <div class="card-title">Classic Sharwani</div>
                             <div class="card-desc">Timeless silhouettes and classic tailoring.</div>
                             <div class="card-price">$339.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+9" alt="Minimal Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+9"
+                            alt="Minimal Sharwani">
                         <div class="card-body">
                             <div class="card-label">Minimal</div>
                             <div class="card-title">Minimal Sharwani</div>
                             <div class="card-desc">Clean lines for a contemporary formal look.</div>
                             <div class="card-price">$289.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+10" alt="Limited Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+10"
+                            alt="Limited Sharwani">
                         <div class="card-body">
                             <div class="card-label">Limited</div>
                             <div class="card-title">Limited Sharwani</div>
                             <div class="card-desc">Special limited edition sharwani.</div>
                             <div class="card-price">$599.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+11" alt="Embellished Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+11"
+                            alt="Embellished Sharwani">
                         <div class="card-body">
                             <div class="card-label">Occasion</div>
                             <div class="card-title">Embellished Sharwani</div>
                             <div class="card-desc">Decorative pieces for grand events.</div>
                             <div class="card-price">$459.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
 
-                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+12" alt="Festive Sharwani">
+                    <div class="card"><img class="card-img" src="https://via.placeholder.com/800x600?text=Sharwani+12"
+                            alt="Festive Sharwani">
                         <div class="card-body">
                             <div class="card-label">Festive</div>
                             <div class="card-title">Festive Sharwani</div>
                             <div class="card-desc">Bright and festive sharwani options.</div>
                             <div class="card-price">$359.99</div>
-                            <div class="card-actions"><button class="card-action-btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button><button class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
+                            <div class="card-actions"><button class="card-action-btn add-to-cart"
+                                    onclick="alert('Added to cart!')">Add to Cart</button><button
+                                    class="card-action-btn" onclick="alert('Added to wishlist!')">❤️</button></div>
                         </div>
                     </div>
                 </div>
