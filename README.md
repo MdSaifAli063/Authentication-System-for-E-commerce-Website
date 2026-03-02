@@ -20,7 +20,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-📁 What’s inside
+## 📁 What’s inside
 
 - public/ — EJS templates and client HTML/CSS
 - src/index.js — Express app, auth routes, mailer + session handling
