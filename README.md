@@ -131,7 +131,8 @@ Improvements welcome: PRs for session store integration, CSRF protection, rate l
 
 ---
 
-📜 License
+##📜 License
+
 MIT — feel free to reuse and adapt.
 
 ---
