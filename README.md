@@ -18,6 +18,8 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 - Body normalizer to accept common field name variants (Email, username, pass, pwd)
 - Simple category pages and protected routes (profile, orders, cart, wishlist)
 
+---
+
 📁 What’s inside
 
 - public/ — EJS templates and client HTML/CSS
