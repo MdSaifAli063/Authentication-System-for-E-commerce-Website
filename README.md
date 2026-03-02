@@ -52,7 +52,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-🧩 Routes (primary)
+## 🧩 Routes (primary)
 
 - GET /, /home — Home
 - GET /products, /services, /booking, /about, /contact — Pages (some protected)
