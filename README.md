@@ -10,7 +10,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-##✨ Highlights
+## ✨ Highlights
 
 - Modern responsive UI tailored for men's fashion
 - Secure auth flows: signup, login, logout, forgot/reset password (token + expiry)
