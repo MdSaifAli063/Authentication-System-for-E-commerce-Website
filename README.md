@@ -125,7 +125,8 @@ Note:
 
 ---
 
-📣 Contributing
+## 📣 Contributing
+
 Improvements welcome: PRs for session store integration, CSRF protection, rate limiting, or design tweaks.
 
 ---
