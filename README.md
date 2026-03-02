@@ -75,7 +75,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-🔧 Development tips
+## 🔧 Development tips
 
 - Tests / mocks: password reset link logs to console in dev
 - Use the included body normalizer to support alternate form field names
