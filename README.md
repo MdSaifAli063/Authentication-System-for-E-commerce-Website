@@ -66,7 +66,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-📌 Notes for deployment
+## 📌 Notes for deployment
 
 - Use a persistent session store (connect-mongo or Redis) in production
 - Set cookie.secure = true behind HTTPS; set app.set('trust proxy', 1) when behind a proxy
