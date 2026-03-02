@@ -29,7 +29,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-🚀 Quick start (dev)
+## 🚀 Quick start (dev)
 
 1. Clone
    git clone <your-repo-url>
