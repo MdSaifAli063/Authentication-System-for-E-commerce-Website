@@ -10,7 +10,6 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-
 ## ✨ Highlights
 
 - Modern responsive UI tailored for men's fashion
