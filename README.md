@@ -10,7 +10,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-✨ Highlights
+## ✨ Highlights
 
 - Modern responsive UI tailored for men's fashion
 - Secure auth flows: signup, login, logout, forgot/reset password (token + expiry)
@@ -18,7 +18,9 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 - Body normalizer to accept common field name variants (Email, username, pass, pwd)
 - Simple category pages and protected routes (profile, orders, cart, wishlist)
 
-📁 What’s inside
+---
+
+## 📁 What’s inside
 
 - public/ — EJS templates and client HTML/CSS
 - src/index.js — Express app, auth routes, mailer + session handling
@@ -27,7 +29,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-🚀 Quick start (dev)
+## 🚀 Quick start (dev)
 
 1. Clone
    git clone <your-repo-url>
@@ -50,7 +52,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-🧩 Routes (primary)
+## 🧩 Routes (primary)
 
 - GET /, /home — Home
 - GET /products, /services, /booking, /about, /contact — Pages (some protected)
@@ -64,7 +66,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-📌 Notes for deployment
+## 📌 Notes for deployment
 
 - Use a persistent session store (connect-mongo or Redis) in production
 - Set cookie.secure = true behind HTTPS; set app.set('trust proxy', 1) when behind a proxy
@@ -73,7 +75,7 @@ A clean, responsive e‑commerce starter site focused on premium men's fashion �
 
 ---
 
-🔧 Development tips
+## 🔧 Development tips
 
 - Tests / mocks: password reset link logs to console in dev
 - Use the included body normalizer to support alternate form field names
@@ -123,12 +125,14 @@ Note:
 
 ---
 
-📣 Contributing
+## 📣 Contributing
+
 Improvements welcome: PRs for session store integration, CSRF protection, rate limiting, or design tweaks.
 
 ---
 
-📜 License
+## 📜 License
+
 MIT — feel free to reuse and adapt.
 
 ---
