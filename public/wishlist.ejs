@@ -568,6 +568,25 @@
             .grid.categories {
                 grid-template-columns: repeat(3, 1fr);
             }
+
+            /* wishlist grid layout */
+            .grid.wishlist {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            @media (max-width: 900px) {
+                .grid.wishlist {
+                    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                    gap: 16px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .grid.wishlist {
+                    grid-template-columns: 1fr;
+                }
+            }
         }
 
         @media (max-width: 899px) {
@@ -582,13 +601,14 @@
 
         .card {
             background: linear-gradient(135deg, #fff 80%, #f4e4a6 100%);
-            border-radius: 24px;
-            box-shadow: 0 4px 24px rgba(212, 175, 55, 0.12);
+            border-radius: 18px;
+            box-shadow: 0 2px 12px rgba(212, 175, 55, 0.12);
             overflow: hidden;
             transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
             cursor: pointer;
-            border: 2px solid #f4e4a6;
+            border: 1px solid #f4e4a6;
             position: relative;
+            font-size: 13px;
         }
 
         .card:hover {
@@ -599,10 +619,10 @@
 
         .card-img {
             width: 100%;
-            height: 256px;
+            height: 120px;
             object-fit: cover;
-            border-radius: 24px 24px 0 0;
-            box-shadow: 0 2px 8px #d4af37;
+            border-radius: 18px 18px 0 0;
+            box-shadow: 0 2px 4px #d4af37;
             transition: transform 0.2s;
         }
 
@@ -611,7 +631,7 @@
         }
 
         .card-body {
-            padding: 32px 24px 24px 24px;
+            padding: 12px 12px 12px 12px;
         }
 
         .card-label {
@@ -629,16 +649,16 @@
         .card-title {
             font-family: 'Poppins', Arial, sans-serif;
             font-weight: 700;
-            font-size: 24px;
+            font-size: 16px;
             color: #1a2332;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
             letter-spacing: 1px;
         }
 
         .card-desc {
             color: #4a5568;
-            font-size: 16px;
-            margin-bottom: 18px;
+            font-size: 12px;
+            margin-bottom: 10px;
         }
 
         .card-price {
@@ -646,6 +666,19 @@
             color: #d4af37;
             text-decoration: line-through;
             font-weight: 600;
+        }
+
+        .empty-msg {
+            text-align: center;
+            color: #4a5568;
+            font-size: 18px;
+            margin: 40px 0;
+        }
+
+        /* show normal price without strikethrough in wishlist */
+        .grid.wishlist .card-price {
+            text-decoration: none;
+            font-size: 18px;
         }
 
         .newsletter-form {
@@ -927,34 +960,63 @@
                 <div class="container">
                     <div class="section-title">Wishlist Items</div>
                     <div class="section-desc">Items you've saved</div>
-                    <div style="max-width:800px; margin:0 auto;">
-                        <% const items=wishlist || [] %>
-                            <% if (items.length===0) { %>
-                                <p style="text-align:center; color:#4a5568; font-size:18px;">Your wishlist is empty.</p>
-                                <% } else { %>
+                    <% const items=wishlist || [] %>
+                        <% if (items.length===0) { %>
+                            <p class="empty-msg">Your wishlist is empty.</p>
+                            <% } else { %>
+                                <div class="grid wishlist">
                                     <% items.forEach(function(item){ %>
-                                        <div class="card" style="margin-bottom:20px;" data-title="<%= item.title %>">
+                                        <div class="card" data-title="<%= item.title %>">
+                                            <div class="card-img"
+                                                style="background:#f0f0f0;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:32px;">
+                                                ❤️
+                                            </div>
                                             <div class="card-body">
                                                 <div class="card-title">
                                                     <%= item.title %>
                                                 </div>
-                                                <div class="card-desc">
-                                                    <%= item.desc %>
-                                                </div>
-                                                <div class="card-price">
-                                                    <%= item.price %>
-                                                </div>
-                                                <div class="card-actions" style="margin-top:12px; gap:8px;">
-                                                    <button class="card-action-btn btn-gold wishlist-addcart-btn"
-                                                        title="Move to Cart">🛒 Add to Cart</button>
-                                                    <button class="card-action-btn btn-danger wishlist-remove-btn"
-                                                        title="Remove from Wishlist">✖ Remove</button>
-                                                </div>
+                                                <% if (item.desc) { %>
+                                                    <div class="card-desc">
+                                                        <%= item.desc %>
+                                                    </div>
+                                                    <% } %>
+                                                        <div class="card-price" style="font-size:16px;">
+                                                            <%= item.price %>
+                                                        </div>
+                                                        <div class="card-actions" style="margin-top:8px; gap:6px;">
+                                                            <button
+                                                                class="card-action-btn btn-gold wishlist-addcart-btn"
+                                                                style="padding:6px 18px;font-size:13px;"
+                                                                title="Move to Cart">
+                                                                <svg fill="none" stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    viewBox="0 0 24 24">
+                                                                    <path
+                                                                        d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z">
+                                                                    </path>
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                                                </svg>
+                                                                Add to Cart
+                                                            </button>
+                                                            <button
+                                                                class="card-action-btn btn-danger wishlist-remove-btn"
+                                                                style="padding:6px 18px;font-size:13px;"
+                                                                title="Remove from Wishlist">
+                                                                <svg fill="none" stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    viewBox="0 0 24 24">
+                                                                    <path d="M3 6h18M9 6v12M15 6v12M5 6l1-4h12l1 4">
+                                                                    </path>
+                                                                </svg>
+                                                                Remove
+                                                            </button>
+                                                        </div>
                                             </div>
                                         </div>
                                         <% }); %>
-                                            <% } %>
-                    </div>
+                                </div>
+                                <% } %>
                 </div>
             </section>
         </main>
@@ -1035,11 +1097,9 @@
                                     updateWishlistBadge(data.count);
                                 }
                                 card.remove();
-                                if (document.querySelectorAll('.card[data-title]').length === 0) {
-                                    const container = document.querySelector('section .container > div[style*="max-width:800px"]');
-                                    if (container) {
-                                        container.innerHTML = '<p style="text-align:center; color:#4a5568; font-size:18px;">Your wishlist is empty.</p>';
-                                    }
+                                const grid = document.querySelector('.grid.wishlist');
+                                if (grid && grid.querySelectorAll('.card').length === 0) {
+                                    grid.innerHTML = '<p class="empty-msg">Your wishlist is empty.</p>';
                                 }
                             });
                         });
@@ -1068,11 +1128,9 @@
                                         updateWishlistBadge(data.count);
                                     }
                                     card.remove();
-                                    if (document.querySelectorAll('.card[data-title]').length === 0) {
-                                        const container = document.querySelector('section .container > div[style*="max-width:800px"]');
-                                        if (container) {
-                                            container.innerHTML = '<p style="text-align:center; color:#4a5568; font-size:18px;">Your wishlist is empty.</p>';
-                                        }
+                                    const grid = document.querySelector('.grid.wishlist');
+                                    if (grid && grid.querySelectorAll('.card').length === 0) {
+                                        grid.innerHTML = '<p class="empty-msg">Your wishlist is empty.</p>';
                                     }
                                 });
                             });
