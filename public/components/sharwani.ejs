@@ -502,7 +502,10 @@
 </head>
 
 <body>
+     <%- include('./_back-to-home') %>
+
     <main>
+
         <section class="hero-section"
             style="background: linear-gradient(135deg, #1a2332 0%, #2d3748 50%, #d4af37 100%); padding: 80px 0; border-radius: 0 0 48px 48px; position: relative; overflow: hidden; margin-top: 0; margin-bottom: 90px;">
             <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2); top: 0;"></div>
@@ -940,7 +943,6 @@
             </div>
         </section>
     </main>
-    <%- include('partials/footer.ejs') %>
-    <%- include('./_back-to-home') %>
+    <%- include('../partials/footer.ejs') %>
 
 </html>
